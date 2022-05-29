@@ -1,42 +1,13 @@
-import { graphql, Link } from "gatsby";
 import React from "react";
-import { Footer } from "../components/Footer";
-import { DiscordIcon } from "../components/icons/DiscordIcon";
-import { InstagramIcon } from "../components/icons/InstagramIcon";
-import { OpenseaIcon } from "../components/icons/OpenseaIcon";
-import { TwitterIcon } from "../components/icons/TwitterIcon";
+
 import { Title } from "../components/Title";
-import { WMSLogo } from "../components/WMSLogo";
 
-interface Props {
-  data: {
-    allMarkdownRemark: {
-      edges: {
-        node: {
-          frontmatter: {
-            twitter_url: string;
-            instagram_url: string;
-            discord_url: string;
-            opensea_url: string;
-            digitalrocket_url: string;
-            mailing_text: string;
-          };
-        };
-      }[];
-    };
-  };
-}
+interface Props {}
 
-export default function Template({ data }: Props) {
-  const { allMarkdownRemark } = data;
-  const globalFrontmatter = allMarkdownRemark.edges
-    .map(({ node }) => node)
-    .map(({ frontmatter }) => frontmatter)
-    .find((frontmatter: any) => !Object.values(frontmatter).includes(null))!;
-
+export default function Template({}: Props) {
   return (
     <div>
-      <div className="flex flex-col items-end gap-2 p-12 lg:flex-row lg:justify-around">
+      {/* <div className="flex flex-col items-end gap-2 p-12 lg:flex-row lg:justify-around">
         <Link to="/">
           <WMSLogo className="w-24" />
         </Link>
@@ -55,7 +26,7 @@ export default function Template({ data }: Props) {
             <OpenseaIcon />
           </a>
         </div>
-      </div>
+      </div> */}
 
       <main className="flex flex-col items-center p-8">
         <Title>Not Found 😥</Title>
@@ -65,7 +36,7 @@ export default function Template({ data }: Props) {
         </p>
       </main>
 
-      <Footer
+      {/* <Footer
         landing={false}
         twitter_url={globalFrontmatter.twitter_url}
         instagram_url={globalFrontmatter.instagram_url}
@@ -73,26 +44,7 @@ export default function Template({ data }: Props) {
         opensea_url={globalFrontmatter.opensea_url}
         digitalrocket_url={globalFrontmatter.digitalrocket_url}
         mailing_text={globalFrontmatter.mailing_text}
-      />
+      /> */}
     </div>
   );
 }
-
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            twitter_url
-            instagram_url
-            discord_url
-            opensea_url
-            digitalrocket_url
-            mailing_text
-          }
-        }
-      }
-    }
-  }
-`;

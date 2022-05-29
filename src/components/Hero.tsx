@@ -9,27 +9,22 @@ import { Title } from "./Title";
 import { WMSLogo } from "./WMSLogo";
 
 interface Props {
-  hero_title: string;
-  hero_buttons: Button[];
-  hero_showcase: IShowcase[];
 }
 
 export const Hero: React.FC<Props> = ({
-  hero_title,
-  hero_buttons,
-  hero_showcase,
 }) => {
   return (
     <section id="hero" className="flex flex-col items-center gap-8 p-4">
-      <WMSLogo className="w-[80%] lg:w-[45%]" />
+      {/* <WMSLogo className="w-[80%] lg:w-[45%]" /> */}
 
       <h1 className="self-center font-[Aliseo] max-w-lg italic font-bold text-center text-5xl lg:max-w-3xl">
-        {hero_title}
+        {/* {hero_title} */}
+        Lorem ipsum
       </h1>
 
-      <Showcase hero_showcase={hero_showcase} />
+      {/* <Showcase hero_showcase={hero_showcase} /> */}
 
-      <div className="flex flex-col items-center justify-center gap-x-24 gap-y-2 md:flex-row">
+      {/* <div className="flex flex-col items-center justify-center gap-x-24 gap-y-2 md:flex-row">
         {hero_buttons &&
           hero_buttons.map(
             (
@@ -55,7 +50,7 @@ export const Hero: React.FC<Props> = ({
               </FancyButton>
             )
           )}
-      </div>
+      </div> */}
     </section>
   );
 };
