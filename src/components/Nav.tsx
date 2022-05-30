@@ -42,18 +42,16 @@ const NavLink: React.FC<NavLinkProps> = ({
 
 export const Nav: React.FC<Props> = ({}) => {
   return (
-    <nav className="flex justify-center h-24 gap-2 bg-green-600 border-t-8 border-green-800 mt-36">
+    <nav className="flex justify-center h-24 gap-2 p-8 bg-green-600 border-t-8 border-green-800 lg:mt-36">
       <StaticImage
-        className="translate-y-[-60%] w-64 h-64"
+        className="hidden lg:inline lg:translate-y-[-60%] w-16 h-16 lg:w-64 lg:h-64"
         src="../images/logo.png"
         alt=""
       />
       <div className="flex flex-row items-center justify-center gap-2">
         <NavLink href="#about">About</NavLink>
-        <NavLink href="#shop" target="_blank">
-          Welcome
-        </NavLink>
-        <NavLink href="#team">Crew</NavLink>
+        <NavLink href="#welcome">Welcome</NavLink>
+        <NavLink href="#crew">Crew</NavLink>
         <NavLink href="#roadmap">Roadmap</NavLink>
       </div>
     </nav>

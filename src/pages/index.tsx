@@ -27,7 +27,7 @@ export default ({}: Props) => {
 
           <StaticImage src="../images/rocket.png" alt="" />
 
-          <p>
+          <p className="font-bold">
             JOIN US AND BE PART OF THE DIGITAL ROCKET CREW LET'S BE THE FIRST TO
             STEP ON THE LAND OF THE NEW WORLD. EVERY MILE OF THIS JOURNEY WILL
             BE A REVOLUTION.
@@ -218,7 +218,7 @@ export default ({}: Props) => {
         </div>
 
         <div className="flex flex-col items-center w-full max-w-3xl p-2 mx-auto">
-          <p>
+          <p className="font-bold">
             10% of your NFT purchase will go to the Spanish company NANTEK who
             developed technology to transform the plastic of clinical masks into
             hydrogen fuel. For every kilogram of recycled mask you can generate
