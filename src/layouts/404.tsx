@@ -4,7 +4,7 @@ import { Title } from "../components/Title";
 
 interface Props {}
 
-export default function Template({}: Props) {
+export const NotFoundLayout = ({}: Props) => {
   return (
     <div>
       {/* <div className="flex flex-col items-end gap-2 p-12 lg:flex-row lg:justify-around">
@@ -47,4 +47,4 @@ export default function Template({}: Props) {
       /> */}
     </div>
   );
-}
+};

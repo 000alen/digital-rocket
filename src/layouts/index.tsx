@@ -9,7 +9,7 @@ import { Title } from "../components/Title";
 
 interface Props {}
 
-export default ({}: Props) => {
+export const IndexLayout = ({}: Props) => {
   return (
     <div className="flex flex-col max-w-6xl gap-12 mx-auto scroll-smooth">
       <Helmet>
