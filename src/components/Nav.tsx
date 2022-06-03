@@ -53,6 +53,14 @@ export const Nav: React.FC<Props> = ({}) => {
         <NavLink href="#welcome">Welcome</NavLink>
         <NavLink href="#crew">Crew</NavLink>
         <NavLink href="#roadmap">Roadmap</NavLink>
+        <div className="flex flex-row items-center justify-center gap-2">
+          <NavLink className="!not-italic" href="/">
+            EN
+          </NavLink>
+          <NavLink className="!not-italic" href="/es/">
+            ES
+          </NavLink>
+        </div>
       </div>
     </nav>
   );

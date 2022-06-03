@@ -11,7 +11,7 @@ interface Props {}
 
 export const IndexLayout = ({}: Props) => {
   return (
-    <div className="flex flex-col max-w-6xl gap-12 mx-auto scroll-smooth">
+    <div className="flex flex-col max-w-6xl gap-24 mx-auto scroll-smooth">
       <Helmet>
         <title>Digital Rocket</title>
       </Helmet>
@@ -21,7 +21,7 @@ export const IndexLayout = ({}: Props) => {
       <Nav />
 
       <section className="relative">
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 mx-auto">
+        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-12 mx-auto">
           <Title className="text-right">
             Every mile of this <br />
             <span className="text-green-600">JOURNEY</span> will be a <br />
