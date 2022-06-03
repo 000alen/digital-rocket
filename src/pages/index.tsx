@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 
 import { Footer } from "../components/Footer";
 import { Nav } from "../components/Nav";
+import { Stars } from "../components/Stars";
 import { Title } from "../components/Title";
 
 interface Props {}
@@ -14,6 +15,8 @@ export default ({}: Props) => {
       <Helmet>
         <title>Digital Rocket</title>
       </Helmet>
+
+      <Stars />
 
       <Nav />
 
@@ -225,6 +228,21 @@ export default ({}: Props) => {
             one kilogram of hydrogen. For each NFT in Floor Price you will be
             recycling x kilograms of masks and eliminating x kilograms of
             disused plastics.
+          </p>
+        </div>
+      </section>
+
+      <section className="relative">
+        <div className="flex flex-col items-center w-full p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
+          <Title>Services</Title>
+        </div>
+
+        <div className="flex flex-col items-center w-full max-w-3xl p-2 mx-auto">
+          <p className="font-bold">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi
+            accusantium nesciunt magni quod ex magnam iusto harum earum est
+            accusamus excepturi natus soluta eaque officiis ipsa. Officiis,
+            praesentium exercitationem?
           </p>
         </div>
       </section>
