@@ -13,7 +13,7 @@ interface Props {}
 
 export const Footer: React.FC<Props> = ({}) => {
   return (
-    <footer className="flex justify-between h-24 gap-2 p-8 bg-green-600 bg-opacity-50 border-t-2 border-green-400 mt-36">
+    <footer className="flex justify-between h-24 gap-2 p-8 bg-green-600 bg-opacity-50 border-t-2 border-green-400">
       <div className="flex items-center justify-center gap-2">
         <a href="" target="_blank">
           <TwitterIcon />

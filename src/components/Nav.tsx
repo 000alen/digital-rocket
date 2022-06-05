@@ -42,7 +42,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 
 export const Nav: React.FC<Props> = ({}) => {
   return (
-    <nav className="flex justify-center h-24 gap-2 p-8 bg-green-600 border-t-8 border-green-800 lg:mt-36">
+    <nav className="flex justify-center h-24 gap-2 p-8 bg-green-600 border-t-8 border-green-800 lg:mt-32">
       <StaticImage
         className="hidden lg:inline lg:translate-y-[-60%] w-16 h-16 lg:w-64 lg:h-64"
         src="../images/logo.png"

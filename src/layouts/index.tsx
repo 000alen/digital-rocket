@@ -11,7 +11,7 @@ interface Props {}
 
 export const IndexLayout = ({}: Props) => {
   return (
-    <div className="flex flex-col max-w-6xl gap-24 mx-auto scroll-smooth">
+    <div id="top" className="flex flex-col">
       <Helmet>
         <title>Digital Rocket</title>
       </Helmet>
@@ -20,8 +20,8 @@ export const IndexLayout = ({}: Props) => {
 
       <Nav />
 
-      <section className="relative">
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-12 mx-auto">
+      <section id="hero" className="relative max-w-3xl mx-auto my-24">
+        <div className="flex flex-col items-center w-full p-2">
           <Title className="text-right">
             Every mile of this <br />
             <span className="text-green-600">JOURNEY</span> will be a <br />
@@ -45,30 +45,25 @@ export const IndexLayout = ({}: Props) => {
         </div>
 
         <StaticImage
-          className="!absolute -z-[1] bottom-0 w-full h-auto"
-          src="../images/earth_1.jpg"
+          className="!absolute -z-[1] -bottom-44 -right-44 w-full max-w-xl h-auto"
+          src="../images/planet.png"
           alt=""
         />
       </section>
 
-      <section className="relative">
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 mx-auto">
-          <Title className="text-center">
-            …TAKEOFF!, WE HAVE TAKEOFF! <br />
-            <span className="text-green-600">DIGITAL ROCKET</span> IS ALREADY IN
-            SPACE
-          </Title>
+      <section id="about" className="relative">
+        <Title className="mb-24 text-center">
+          …TAKEOFF!, WE HAVE TAKEOFF! <br />
+          <span className="text-green-600">DIGITAL ROCKET</span> IS ALREADY IN
+          SPACE
+        </Title>
+
+        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-0 mx-auto">
           <StaticImage src="../images/astronaut_1.png" alt="" />
         </div>
-
-        <StaticImage
-          className="!absolute bottom-0 -z-[2] w-full h-auto"
-          src="../images/planets_4.jpg"
-          alt=""
-        />
       </section>
 
-      <section className="relative">
+      <section id="welcome" className="relative">
         <div className="flex flex-col items-center w-full p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
           <Title>Welcome</Title>
           <p>THIS IS YOUR CAPTAIN SPEAKING.</p>
@@ -82,26 +77,23 @@ export const IndexLayout = ({}: Props) => {
             THE FIRING SEQUENCE BEGINS ALL ENGINES RUNNING”
           </p>
 
-          <h2 className="font-[Aliseo] text-purple-600 self-start font-bold text-2xl">
+          <h2 className="font-[Aliseo] text-purple-600 self-start font-bold text-2xl mb-24">
             IGNITION
           </h2>
-        </div>
 
-        <StaticImage src="../images/crew.png" alt="" />
-        <StaticImage
-          class="!absolute blur inset-x-0 top-0 -z-[3] w-full h-auto"
-          src="../images/moon_1.jpg"
-          alt=""
-        />
+          <StaticImage class="max-w-3xl" src="../images/crew.png" alt="" />
+        </div>
       </section>
 
-      <section className="relative">
+      <Stars />
+
+      <section id="crew" className="relative">
         <div className="flex flex-col items-center w-full p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
           <Title>Crew</Title>
         </div>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 mx-auto">
-          <p>
+        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-0 mx-auto">
+          <p className="mb-24">
             I.V THERE ARE PEOPLE WHO GET OUT OF THE BOX BEFORE OTHERS. I.V. HE
             DOES IT EVERY DAY AND FINDS NEW WAYS TO HACK THIS MATRIX. <br />
             <br />
@@ -117,24 +109,17 @@ export const IndexLayout = ({}: Props) => {
             J.M CROSSES MATTER TO GO IN SEARCH OF THE IDEAS FOT THE FUTURE. GIVE
             IT A BLANK SHEET AND IT WILL FILL THE VOID.
           </p>
-          {/* ! TODO: Missing astronauts image */}
-          {/* <StaticImage src="../images/logo.png" alt="" /> */}
-          <StaticImage src="../images/astronaut_1.png" alt="" />
+          
+          <StaticImage src="../images/astronauts.png" alt="" />
         </div>
-
-        <StaticImage
-          class="!absolute bottom-0 -z-[4] w-full h-auto"
-          src="../images/moon_2.jpg"
-          alt=""
-        />
       </section>
 
-      <section className="relative">
+      <section id="roadmap" className="relative">
         <div className="flex flex-col items-center p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
           <Title>Roadmap</Title>
         </div>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 mx-auto">
+        <div className="flex flex-col items-center w-full max-w-3xl py-24 mx-auto">
           <div className="flex w-full gap-8">
             <div className="flex flex-col justify-between w-full">
               <div className="flex flex-col items-end">
@@ -207,21 +192,15 @@ export const IndexLayout = ({}: Props) => {
             </div>
           </div>
         </div>
-
-        <StaticImage
-          class="!absolute blur bottom-0 -z-[5] w-full h-auto"
-          src="../images/planets_4.jpg"
-          alt=""
-        />
       </section>
 
-      <section className="relative">
+      <section id="donation" className="relative">
         <div className="flex flex-col items-center w-full p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
           <Title>Donation</Title>
         </div>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 mx-auto">
-          <p className="font-bold">
+        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-0 mx-auto">
+          <p className="mb-24 font-bold">
             10% of your NFT purchase will go to the Spanish company NANTEK who
             developed technology to transform the plastic of clinical masks into
             hydrogen fuel. For every kilogram of recycled mask you can generate
@@ -229,21 +208,25 @@ export const IndexLayout = ({}: Props) => {
             recycling x kilograms of masks and eliminating x kilograms of
             disused plastics.
           </p>
+
+          <StaticImage src="../images/astronaut_1.png" alt="" />
         </div>
       </section>
 
-      <section className="relative">
+      <section id="services" className="relative">
         <div className="flex flex-col items-center w-full p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
           <Title>Services</Title>
         </div>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 mx-auto">
-          <p className="font-bold">
+        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-0 mx-auto">
+          <p className="mb-24 font-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi
             accusantium nesciunt magni quod ex magnam iusto harum earum est
             accusamus excepturi natus soluta eaque officiis ipsa. Officiis,
             praesentium exercitationem?
           </p>
+
+          <StaticImage src="../images/astronaut_1.png" alt="" />
         </div>
       </section>
 
