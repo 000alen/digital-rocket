@@ -2,7 +2,6 @@ import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 import { Helmet } from "react-helmet";
 
-import { Footer } from "../components/Footer";
 import { Nav } from "../components/Nav";
 import { Stars } from "../components/Stars";
 import { Title } from "../components/Title";
@@ -21,7 +20,7 @@ export const IndexLayout = ({}: Props) => {
       <Nav />
 
       <section id="hero" className="relative max-w-3xl mx-auto my-24">
-        <div className="flex flex-col items-center w-full p-2">
+        <div className="flex flex-col items-center w-full gap-8 p-4">
           <Title className="text-right">
             Every mile of this <br />
             <span className="text-green-600">JOURNEY</span> will be a <br />
@@ -45,7 +44,7 @@ export const IndexLayout = ({}: Props) => {
         </div>
 
         <StaticImage
-          className="!absolute -z-[1] -bottom-44 -right-44 w-full max-w-xl h-auto"
+          className="!absolute -z-[1] opacity-50 -bottom-44 -right-44 w-full max-w-xl h-auto"
           src="../images/planet.png"
           alt=""
         />
@@ -58,18 +57,18 @@ export const IndexLayout = ({}: Props) => {
           SPACE
         </Title>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-0 mx-auto">
+        <div className="flex flex-col items-center w-full max-w-3xl p-4 pb-0 mx-auto">
           <StaticImage src="../images/astronaut_1.png" alt="" />
         </div>
       </section>
 
       <section id="welcome" className="relative">
-        <div className="flex flex-col items-center w-full p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
+        <div className="flex flex-col items-center w-full p-4 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
           <Title>Welcome</Title>
           <p>THIS IS YOUR CAPTAIN SPEAKING.</p>
         </div>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 mx-auto">
+        <div className="flex flex-col items-center w-full max-w-3xl p-4 mx-auto">
           <p>
             “THE CREW IS READY FOR THE MISSION 22 SECONDS REMAINING AND COUNTING
             FOR LAUNCH THE OBJECTIVE OF THE MISSION WILL BE TO CONQUER THE
@@ -80,20 +79,16 @@ export const IndexLayout = ({}: Props) => {
           <h2 className="font-[Aliseo] text-purple-600 self-start font-bold text-2xl mb-24">
             IGNITION
           </h2>
-
-          <StaticImage class="max-w-3xl" src="../images/crew.png" alt="" />
         </div>
       </section>
 
       <Stars />
 
       <section id="crew" className="relative">
-        <div className="flex flex-col items-center w-full p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
-          <Title>Crew</Title>
-        </div>
-
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-0 mx-auto">
-          <p className="mb-24">
+        <div className="flex flex-col items-center w-full max-w-3xl p-4 pb-24 mx-auto">
+          <StaticImage src="../images/crew.png" alt="" />
+          <Title className="w-full text-left">Crew</Title>
+          <p>
             I.V THERE ARE PEOPLE WHO GET OUT OF THE BOX BEFORE OTHERS. I.V. HE
             DOES IT EVERY DAY AND FINDS NEW WAYS TO HACK THIS MATRIX. <br />
             <br />
@@ -109,17 +104,16 @@ export const IndexLayout = ({}: Props) => {
             J.M CROSSES MATTER TO GO IN SEARCH OF THE IDEAS FOT THE FUTURE. GIVE
             IT A BLANK SHEET AND IT WILL FILL THE VOID.
           </p>
-          
-          <StaticImage src="../images/astronauts.png" alt="" />
         </div>
       </section>
 
       <section id="roadmap" className="relative">
-        <div className="flex flex-col items-center p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
+        {/* <div className="flex flex-col items-center p-4 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
           <Title>Roadmap</Title>
-        </div>
+        </div> */}
 
-        <div className="flex flex-col items-center w-full max-w-3xl py-24 mx-auto">
+        <div className="flex flex-col items-center w-full max-w-3xl p-4 pb-24 mx-auto">
+          <Title className="w-full text-left">Roadmap</Title>
           <div className="flex w-full gap-8">
             <div className="flex flex-col justify-between w-full">
               <div className="flex flex-col items-end">
@@ -195,11 +189,12 @@ export const IndexLayout = ({}: Props) => {
       </section>
 
       <section id="donation" className="relative">
-        <div className="flex flex-col items-center w-full p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
+        {/* <div className="flex flex-col items-center w-full p-4 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
           <Title>Donation</Title>
-        </div>
+        </div> */}
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-0 mx-auto">
+        <div className="flex flex-col items-center w-full max-w-3xl p-4 pb-0 mx-auto">
+          <Title className="w-full text-left">Donation</Title>
           <p className="mb-24 font-bold">
             10% of your NFT purchase will go to the Spanish company NANTEK who
             developed technology to transform the plastic of clinical masks into
@@ -214,11 +209,11 @@ export const IndexLayout = ({}: Props) => {
       </section>
 
       <section id="services" className="relative">
-        <div className="flex flex-col items-center w-full p-2 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
+        <div className="flex flex-col items-center w-full p-4 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
           <Title>Services</Title>
         </div>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-2 pb-0 mx-auto">
+        <div className="relative flex flex-col items-center w-full max-w-3xl p-4 pb-0 mx-auto">
           <p className="mb-24 font-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi
             accusantium nesciunt magni quod ex magnam iusto harum earum est
@@ -226,11 +221,29 @@ export const IndexLayout = ({}: Props) => {
             praesentium exercitationem?
           </p>
 
-          <StaticImage src="../images/astronaut_1.png" alt="" />
+          <div className="flex justify-end w-full -mb-48">
+            <StaticImage
+              className="w-48 h-48"
+              src="../images/logo.png"
+              alt=""
+            />
+          </div>
+
+          <StaticImage src="../images/astronauts.png" alt="" />
         </div>
       </section>
 
-      <Footer />
+      <section className="flex items-center justify-center w-full gap-8 p-8 bg-gradient-to-r from-purple-900 to-purple-500">
+        <Title>
+          Got a Project?
+          <br />
+          We want to hear about it
+        </Title>
+
+        <div className="flex items-center justify-center w-32 h-32 text-center text-black rounded-full bg-cyan-300">
+          Get a Free Estimate!
+        </div>
+      </section>
     </div>
   );
 };

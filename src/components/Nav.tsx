@@ -7,7 +7,6 @@ import { OpenseaIcon } from "./icons/OpenseaIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
 
 interface Props {}
-
 interface NavLinkProps {
   className?: string;
   href: string;
@@ -30,7 +29,7 @@ const NavLink: React.FC<NavLinkProps> = ({
 }) => {
   return (
     <a
-      className={`${className} text-xl italic font-bold`}
+      className={`${className} text-xl italic font-bold lg:transition-all lg:hover:text-green-400`}
       href={href}
       onClick={() => onClick && onClick()}
       {...(target ? { target } : {})}
@@ -40,28 +39,85 @@ const NavLink: React.FC<NavLinkProps> = ({
   );
 };
 
-export const Nav: React.FC<Props> = ({}) => {
+const NavIcon: React.FC<NavIconProps> = ({ href, IconComponent }) => {
   return (
-    <nav className="flex justify-center h-24 gap-2 p-8 bg-green-600 border-t-8 border-green-800 lg:mt-32">
-      <StaticImage
-        className="hidden lg:inline lg:translate-y-[-60%] w-16 h-16 lg:w-64 lg:h-64"
-        src="../images/logo.png"
-        alt=""
-      />
-      <div className="flex flex-row items-center justify-center gap-2">
-        <NavLink href="#about">About</NavLink>
-        <NavLink href="#welcome">Welcome</NavLink>
-        <NavLink href="#crew">Crew</NavLink>
-        <NavLink href="#roadmap">Roadmap</NavLink>
-        <div className="flex flex-row items-center justify-center gap-2">
-          <NavLink className="!not-italic" href="/">
-            EN
+    <a
+      className="transition-all hover:text-green-400"
+      href={href}
+      target="_blank"
+    >
+      <IconComponent className="w-6 h-6 transition-all hover:fill-green-400" />
+    </a>
+  );
+};
+
+export const Nav: React.FC<Props> = ({}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <>
+      <nav className="flex flex-row gap-2 p-12">
+        <div
+          className={`${
+            isOpen ? "opacity-100" : "opacity-0 invisible"
+          } fixed top-0 left-0 z-40 flex flex-col items-center justify-center w-screen h-screen gap-2 transition-all bg-green-400 lg:!opacity-100 lg:!visible lg:bg-transparent lg:h-auto lg:w-full lg:justify-around lg:flex-row lg:static`}
+        >
+          <StaticImage className="w-32 h-32" src="../images/logo.png" alt="" />
+
+          <NavLink
+            className="lg:hidden"
+            href="#top"
+            onClick={() => setIsOpen(false)}
+          >
+            TOP
           </NavLink>
-          <NavLink className="!not-italic" href="/es/">
-            ES
+          <NavLink href="#about" onClick={() => setIsOpen(false)}>
+            ABOUT
           </NavLink>
+          <NavLink href="#welcome" onClick={() => setIsOpen(false)}>
+            WELCOME
+          </NavLink>
+          <NavLink href="#crew" onClick={() => setIsOpen(false)}>
+            CREW
+          </NavLink>
+          <NavLink href="#roadmap" onClick={() => setIsOpen(false)}>
+            ROADMAP
+          </NavLink>
+          <NavLink href="#donation" onClick={() => setIsOpen(false)}>
+            DONATION
+          </NavLink>
+          <NavLink href="#services" onClick={() => setIsOpen(false)}>
+            SERVICES
+          </NavLink>
+
+          {/* TODO: Use static query instead of hardcoding it */}
+          <div className="flex flex-row items-center justify-center gap-2">
+            <NavLink
+              className="lg:text-green-400 !not-italic"
+              href="/"
+              onClick={() => setIsOpen(false)}
+            >
+              EN
+            </NavLink>
+            <NavLink
+              className="lg:text-green-400 !not-italic"
+              href="/es/"
+              onClick={() => setIsOpen(false)}
+            >
+              ES
+            </NavLink>
+          </div>
+        </div>
+      </nav>
+
+      <div className="fixed top-0 right-0 z-50 p-12 lg:hidden">
+        <div
+          className={`${isOpen ? "checked" : ""} w-6 h-6 hamburger`}
+          onClick={() => setIsOpen((p) => !p)}
+        >
+          <div className="bar"></div>
         </div>
       </div>
-    </nav>
+    </>
   );
 };
