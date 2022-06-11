@@ -1,23 +1,44 @@
 import { StaticImage } from "gatsby-plugin-image";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
 
+// @ts-ignore
+import Background from "../assets/file.mp4";
 import { Nav } from "../components/Nav";
-import { Stars } from "../components/Stars";
+// import { Stars } from "../components/Stars";
 import { Title } from "../components/Title";
 
 interface Props {}
 
 export const IndexLayout = ({}: Props) => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      // videoRef.current.playbackRate = 0.5;
+    }
+  });
+
   return (
     <div id="top" className="flex flex-col">
       <Helmet>
         <title>Digital Rocket</title>
       </Helmet>
 
-      <Stars />
+      {/* <Stars /> */}
 
       <Nav />
+
+      <video
+        ref={videoRef}
+        playsInline
+        autoPlay
+        muted
+        loop
+        className="fixed inset-0 object-cover w-full h-full -z-10"
+      >
+        <source src={Background} type="video/mp4" />
+      </video>
 
       <section id="hero" className="relative max-w-3xl mx-auto my-24">
         <div className="flex flex-col items-center w-full gap-8 p-4">
@@ -82,7 +103,7 @@ export const IndexLayout = ({}: Props) => {
         </div>
       </section>
 
-      <Stars />
+      {/* <Stars /> */}
 
       <section id="crew" className="relative">
         <div className="flex flex-col items-center w-full max-w-3xl p-4 pb-24 mx-auto">
