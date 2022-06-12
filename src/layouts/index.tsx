@@ -49,7 +49,7 @@ export const IndexLayout = ({}: Props) => {
         </Title>
 
         <div className="relative my-12 -z-10">
-          <Polaroid className="absolute top-12 -left-36 -rotate-12">
+          <Polaroid className="absolute hidden md:block top-12 -left-36 -rotate-12">
             <StaticImage
               className="w-48"
               src="../images/santiago.webp"
@@ -59,7 +59,7 @@ export const IndexLayout = ({}: Props) => {
 
           <Polaroid className="rotate-12">
             <StaticImage
-              className="w-[36rem]"
+              className="w-[20rem] lg:w-[36rem]"
               src="../images/earth_1.jpg"
               alt=""
             />
@@ -97,7 +97,7 @@ export const IndexLayout = ({}: Props) => {
           <div className="-rotate-12">
             <Polaroid>
               <StaticImage
-                className="w-[36rem]"
+                className="w-[20rem] lg:w-[36rem]"
                 src="../images/planets_4.jpg"
                 alt=""
               />
@@ -148,7 +148,7 @@ export const IndexLayout = ({}: Props) => {
         <div className="my-12">
           <Polaroid className="-mb-[12rem] rotate-12">
             <StaticImage
-              className="w-[36rem]"
+              className="w-[20rem] lg:w-[36rem]"
               src="../images/moon.webp"
               alt=""
             />
@@ -181,7 +181,7 @@ export const IndexLayout = ({}: Props) => {
         <div className="my-12">
           <Polaroid className="-mb-[12rem] rotate-12">
             <StaticImage
-              className="w-[36rem]"
+              className="w-[20rem] lg:w-[36rem]"
               src="../images/moon.webp"
               alt=""
             />
