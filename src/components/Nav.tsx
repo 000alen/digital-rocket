@@ -56,7 +56,7 @@ export const Nav: React.FC<Props> = ({}) => {
 
   return (
     <>
-      <nav className="flex flex-row gap-2 p-12">
+      <nav className="flex flex-row w-full gap-2 p-12">
         <div
           className={`${
             isOpen ? "opacity-100" : "opacity-0 invisible"

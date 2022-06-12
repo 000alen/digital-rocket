@@ -5,7 +5,7 @@ import { Helmet } from "react-helmet";
 // @ts-ignore
 import Background from "../assets/file.mp4";
 import { Nav } from "../components/Nav";
-// import { Stars } from "../components/Stars";
+import { Polaroid } from "../components/Polaroid";
 import { Title } from "../components/Title";
 
 interface Props {}
@@ -15,17 +15,15 @@ export const IndexLayout = ({}: Props) => {
 
   useEffect(() => {
     if (videoRef.current) {
-      // videoRef.current.playbackRate = 0.5;
+      videoRef.current.playbackRate = 0.75;
     }
   });
 
   return (
-    <div id="top" className="flex flex-col">
+    <div id="top" className="flex flex-col items-center gap-8">
       <Helmet>
         <title>Digital Rocket</title>
       </Helmet>
-
-      {/* <Stars /> */}
 
       <Nav />
 
@@ -35,20 +33,49 @@ export const IndexLayout = ({}: Props) => {
         autoPlay
         muted
         loop
-        className="fixed inset-0 object-cover w-full h-full -z-10"
+        className="fixed inset-0 object-cover w-full h-full opacity-25 -z-10"
       >
         <source src={Background} type="video/mp4" />
       </video>
 
-      <section id="hero" className="relative max-w-3xl mx-auto my-24">
-        <div className="flex flex-col items-center w-full gap-8 p-4">
-          <Title className="text-right">
-            Every mile of this <br />
-            <span className="text-green-600">JOURNEY</span> will be a <br />
-            Revolution.
-          </Title>
+      <section
+        id="hero"
+        className="relative flex flex-col items-center w-full max-w-3xl gap-8 p-4"
+      >
+        <Title className="text-right">
+          Every mile of this <br />
+          <span className="text-green-600">JOURNEY</span> will be a <br />
+          Revolution.
+        </Title>
 
-          <StaticImage src="../images/rocket.png" alt="" />
+        <div className="relative my-12 -z-10">
+          <Polaroid className="absolute top-12 -left-36 -rotate-12">
+            <StaticImage
+              className="w-48"
+              src="../images/santiago.webp"
+              alt=""
+            />
+          </Polaroid>
+
+          <Polaroid className="rotate-12">
+            <StaticImage
+              className="w-[36rem]"
+              src="../images/earth_1.jpg"
+              alt=""
+            />
+          </Polaroid>
+
+          <StaticImage
+            className="absolute bottom-0 -right-8"
+            src="../images/rocket.png"
+            alt=""
+          />
+        </div>
+
+        <div>
+          <Title className="text-green-600">
+            NFT AND METAVERSE CONTENT DEVELOPER SPACE STATION
+          </Title>
 
           <p className="font-bold">
             JOIN US AND BE PART OF THE DIGITAL ROCKET CREW LET'S BE THE FIRST TO
@@ -57,39 +84,55 @@ export const IndexLayout = ({}: Props) => {
             <br />
             <br />
             HEY! DON'T MISS YOUR SEAT, WE'RE ABOUT TO DEPART …AND DON'T FORGET
-            TO
-            <br />
-            <br />
-            ENJOY THE RIDE. WHAT WOULD YOU LIKE TO DRINK?
+            TO ENJOY THE RIDE. WHAT WOULD YOU LIKE TO DRINK?
           </p>
         </div>
-
-        <StaticImage
-          className="!absolute -z-[1] opacity-50 -bottom-44 -right-44 w-full max-w-xl h-auto"
-          src="../images/planet.png"
-          alt=""
-        />
       </section>
 
-      <section id="about" className="relative">
-        <Title className="mb-24 text-center">
-          …TAKEOFF!, WE HAVE TAKEOFF! <br />
-          <span className="text-green-600">DIGITAL ROCKET</span> IS ALREADY IN
-          SPACE
-        </Title>
+      <section
+        id="about"
+        className="relative flex flex-col items-center w-full max-w-3xl p-4"
+      >
+        <div className="relative my-12 -z-10">
+          <div className="-rotate-12">
+            <Polaroid>
+              <StaticImage
+                className="w-[36rem]"
+                src="../images/planets_4.jpg"
+                alt=""
+              />
+            </Polaroid>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-4 pb-0 mx-auto">
-          <StaticImage src="../images/astronaut_1.png" alt="" />
+            <Title className="absolute inset-0 text-center top-1/4">
+              TAKEOFF!, WE HAVE TAKEOFF! <br />
+              <span className="text-green-600">DIGITAL ROCKET</span> IS ALREADY
+              IN SPACE
+            </Title>
+          </div>
+
+          <div className="absolute -left-24 -bottom-24">
+            <div className="relative">
+              <StaticImage
+                className="w-96"
+                src="../images/astronaut_1.png"
+                alt=""
+              />
+
+              <StaticImage
+                className="absolute w-56 -left-24 -bottom-20"
+                src="../images/thingy.webp"
+                alt=""
+              />
+            </div>
+          </div>
         </div>
       </section>
 
       <section id="welcome" className="relative">
-        <div className="flex flex-col items-center w-full p-4 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
+        <div className="flex flex-col items-center w-full max-w-3xl p-4 mx-auto">
           <Title>Welcome</Title>
           <p>THIS IS YOUR CAPTAIN SPEAKING.</p>
-        </div>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-4 mx-auto">
           <p>
             “THE CREW IS READY FOR THE MISSION 22 SECONDS REMAINING AND COUNTING
             FOR LAUNCH THE OBJECTIVE OF THE MISSION WILL BE TO CONQUER THE
@@ -103,154 +146,191 @@ export const IndexLayout = ({}: Props) => {
         </div>
       </section>
 
-      {/* <Stars /> */}
+      <section
+        id="crew"
+        className="relative flex flex-col items-center w-full max-w-3xl p-4"
+      >
+        <div className="my-12">
+          <Polaroid className="-mb-[12rem] rotate-12">
+            <StaticImage
+              className="w-[36rem]"
+              src="../images/moon.webp"
+              alt=""
+            />
+          </Polaroid>
 
-      <section id="crew" className="relative">
-        <div className="flex flex-col items-center w-full max-w-3xl p-4 pb-24 mx-auto">
           <StaticImage src="../images/crew.png" alt="" />
-          <Title className="w-full text-left">Crew</Title>
-          <p>
-            I.V THERE ARE PEOPLE WHO GET OUT OF THE BOX BEFORE OTHERS. I.V. HE
-            DOES IT EVERY DAY AND FINDS NEW WAYS TO HACK THIS MATRIX. <br />
-            <br />
-            G.P LOOKING AT OPPORTUNITIES AND PUTTING THE PIECES TOGETHER FOR THE
-            OBJECTIVE IS KEY, BUT THEN MAKING THEM WORK IS BETTER. <br />
-            <br />
-            C.V FROM ITS SILENCE ARTICULATES POSSIBLE WORLDS. EVERY INTERACTION
-            CAN CHANGE THE COURSE OF THINGS. <br />
-            <br />
-            S.A A SPARK OF GENIUS IS ABOUT TO EXPLODE, YOU DON'T KNOW WHEN, BUT
-            YOU KNOW IT WILL COME. <br />
-            <br />
-            J.M CROSSES MATTER TO GO IN SEARCH OF THE IDEAS FOT THE FUTURE. GIVE
-            IT A BLANK SHEET AND IT WILL FILL THE VOID.
-          </p>
         </div>
+
+        <Title className="w-full text-left">Crew</Title>
+        <p>
+          OUR CREW IS FROM ALL OF THE WORLD BASED IN SANTIAGO, CHILE. FROM OUR
+          OPERATIONS CENTER IN POSTON DIGITAL ARTS, WITH MORE THAN 20 YEARS OF
+          EXPERIENCE, WE HAVE BUILT A SOLID COMPANY IN THE AUDIOVISUAL WORLD,
+          BOTH IN ADVERTISING AND CINEMA. <br />
+          <br />
+          WE HAVE LEADED PROJECTS FOR BIG BRANDS AND CUSTOMERS FROM ALL OVER THE
+          WORLD AND WE ARE CURRENTLY READY FOR THE NEXT ADVENTURE. <br />
+          <br />
+          THIS NEW WORLD IS CONNECTED WITH THE INTERESTS THAT THE ENTIRE CREW
+          HAS BEEN EXPLORING FOR YEARS. A SPACE WHERE THE BLOCKCHAIN IS OUR
+          CENTRAL AXIS AND OUR MOTIVATION IS TO CREATE AND BE CARRIED AWAY. I.V
+          THERE ARE PEOPLE WHO GET OUT OF THE BOX BEFORE OTHERS. I.V. HE DOES IT
+          EVERY DAY AND FINDS NEW WAYS TO HACK THIS MATRIX.
+        </p>
       </section>
 
-      <section id="roadmap" className="relative">
-        {/* <div className="flex flex-col items-center p-4 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
-          <Title>Roadmap</Title>
-        </div> */}
+      <section
+        id="crew"
+        className="relative flex flex-col items-center w-full max-w-3xl p-4"
+      >
+        <div className="my-12">
+          <Polaroid className="-mb-[12rem] rotate-12">
+            <StaticImage
+              className="w-[36rem]"
+              src="../images/moon.webp"
+              alt=""
+            />
+          </Polaroid>
 
-        <div className="flex flex-col items-center w-full max-w-3xl p-4 pb-24 mx-auto">
-          <Title className="w-full text-left">Roadmap</Title>
-          <div className="flex w-full gap-8">
-            <div className="flex flex-col justify-between w-full">
-              <div className="flex flex-col items-end">
-                <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                  WITHOUT MASK SOCIETY
-                </h2>
-                <p className="font-bold">MINT DATE - JUNE 2022</p>
-              </div>
-              <div className="flex flex-col items-end">
-                <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                  WITHOUT MASK SOCIETY
-                </h2>
-                <p className="font-bold">MINT DATE - JUNE 2022</p>
-              </div>
-              <div className="flex flex-col items-end">
-                <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                  WITHOUT MASK SOCIETY
-                </h2>
-                <p className="font-bold">MINT DATE - JUNE 2022</p>
-              </div>
-              <div className="flex flex-col items-end">
-                <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                  WITHOUT MASK SOCIETY
-                </h2>
-                <p className="font-bold">MINT DATE - JUNE 2022</p>
-              </div>
-              <div className="flex flex-col items-end">
-                <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                  WITHOUT MASK SOCIETY
-                </h2>
-                <p className="font-bold">MINT DATE - JUNE 2022</p>
-              </div>
-              <div className="flex flex-col items-end">
-                <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                  WITHOUT MASK SOCIETY
-                </h2>
-                <p className="font-bold">MINT DATE - JUNE 2022</p>
-              </div>
-              <div className="flex flex-col items-end">
-                <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                  WITHOUT MASK SOCIETY
-                </h2>
-                <p className="font-bold">MINT DATE - JUNE 2022</p>
-              </div>
-            </div>
-            <div className="w-full">
-              <div className="flex justify-end">
-                <StaticImage className="w-28" src="../images/1.png" alt="" />
-              </div>
-
-              <div className="flex">
-                <StaticImage className="w-28" src="../images/1.png" alt="" />
-              </div>
-
-              <div className="flex justify-end">
-                <StaticImage className="w-28" src="../images/1.png" alt="" />
-              </div>
-
-              <div className="flex">
-                <StaticImage className="w-28" src="../images/1.png" alt="" />
-              </div>
-
-              <div className="flex justify-end">
-                <StaticImage className="w-28" src="../images/1.png" alt="" />
-              </div>
-
-              <div className="flex">
-                <StaticImage className="w-28" src="../images/1.png" alt="" />
-              </div>
-            </div>
-          </div>
+          <StaticImage src="../images/astronauts.png" alt="" />
         </div>
+
+        <Title className="w-full text-left">Talents</Title>
+        <p>
+          SANTIAGO AGUILERA <br />
+          ART DIRECTOR <br />
+          DIRECTED MORE THAN 10,000 AUDIOVISUAL AND IMMERSIVE TECHNOLOGY
+          PROJECTS SUCCESSFULLY DELIVERED. VARIOUS AWARDS IN NUMEROUS FESTIVALS.{" "}
+          <br />
+          <br />
+          IVO VODANOVIC <br />
+          EXECUTIVE DIRECTOR
+          <br />
+          WITH MORE THAN TEN YEARS OF EXPERIENCE IN AUDIOVISUAL PRODUCTION, TEN
+          IN RETAIL AND THE LAST THREE DEDICATED TO THE BLOCKCHAIN WORLD, ENTERS
+          THIS WEB 3.0 CHALLENGE FROM THE CHILEAN PATAGONIA.
+          <br />
+          <br />
+          GONZALO POMÉS
+          <br />
+          EXECUTIVE PRODUCER
+          <br />
+          15 YEARS OF EXPERIENCE IN EXECUTIVE PRODUCTION FOR AUDIOVISUAL FILM
+          AND IMMERSIVE ADVERTISING TECHNOLOGY PROJECTS.
+          <br />
+          <br />
+          CLAUDIO VILLARROEL
+          <br />
+          CHIEF FINANCIAL OFFICER
+          <br />
+          MANAGER IN BANKING CORPORATIONS, SELF-TAUGHT TRADER OF THE FIAT AND
+          CRYPTO CURRENCIES. <br />
+          <br />
+          JOAQUIN MATAMALA
+          <br />
+          CREATIVE DIRECTOR
+          <br />
+          DURING THE LAST 15 YEARS HAS CREATED MULTIPLE DIGITAL & AUDIOVISUAL
+          CONTENT. DURING HIS CAREER, HE HAS DIRECTED DOCUMENTARIES, SHORT
+          FILMS, THREE TELEVISION SERIES AND IS CURRENTLY PRODUCING HIS FIRST
+          FEATURE FILM
+        </p>
       </section>
 
-      <section id="donation" className="relative">
-        {/* <div className="flex flex-col items-center w-full p-4 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
-          <Title>Donation</Title>
-        </div> */}
-
-        <div className="flex flex-col items-center w-full max-w-3xl p-4 pb-0 mx-auto">
-          <Title className="w-full text-left">Donation</Title>
-          <p className="mb-24 font-bold">
-            10% of your NFT purchase will go to the Spanish company NANTEK who
-            developed technology to transform the plastic of clinical masks into
-            hydrogen fuel. For every kilogram of recycled mask you can generate
-            one kilogram of hydrogen. For each NFT in Floor Price you will be
-            recycling x kilograms of masks and eliminating x kilograms of
-            disused plastics.
-          </p>
-
-          <StaticImage src="../images/astronaut_1.png" alt="" />
-        </div>
-      </section>
-
-      <section id="services" className="relative">
-        <div className="flex flex-col items-center w-full p-4 bg-green-400 bg-opacity-50 border-t-2 border-b-2 border-green-400">
-          <Title>Services</Title>
-        </div>
-
-        <div className="relative flex flex-col items-center w-full max-w-3xl p-4 pb-0 mx-auto">
-          <p className="mb-24 font-bold">
+      <section id="services" className="flex flex-col items-center w-full">
+        <div className="flex flex-col items-center w-full max-w-3xl p-4">
+          <Title className="w-full text-left">Services</Title>
+          <p className="font-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi
             accusantium nesciunt magni quod ex magnam iusto harum earum est
             accusamus excepturi natus soluta eaque officiis ipsa. Officiis,
             praesentium exercitationem?
           </p>
+        </div>
 
-          <div className="flex justify-end w-full -mb-48">
-            <StaticImage
-              className="w-48 h-48"
-              src="../images/logo.png"
-              alt=""
-            />
+        <div className="flex w-full h-96">
+          <div className="w-full h-full bg-red-600"></div>
+          <div className="w-full h-full bg-green-600"></div>
+          <div className="w-full h-full bg-blue-600"></div>
+        </div>
+      </section>
+
+      <section
+        id="roadmap"
+        className="flex flex-col items-center w-full max-w-3xl p-4"
+      >
+        <Title className="w-full text-left">Roadmap</Title>
+        <div className="flex w-full gap-8">
+          <div className="flex flex-col justify-between w-full">
+            <div className="flex flex-col items-end">
+              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
+                WITHOUT MASK SOCIETY
+              </h2>
+              <p className="font-bold">MINT DATE - JUNE 2022</p>
+            </div>
+            <div className="flex flex-col items-end">
+              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
+                WITHOUT MASK SOCIETY
+              </h2>
+              <p className="font-bold">MINT DATE - JUNE 2022</p>
+            </div>
+            <div className="flex flex-col items-end">
+              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
+                WITHOUT MASK SOCIETY
+              </h2>
+              <p className="font-bold">MINT DATE - JUNE 2022</p>
+            </div>
+            <div className="flex flex-col items-end">
+              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
+                WITHOUT MASK SOCIETY
+              </h2>
+              <p className="font-bold">MINT DATE - JUNE 2022</p>
+            </div>
+            <div className="flex flex-col items-end">
+              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
+                WITHOUT MASK SOCIETY
+              </h2>
+              <p className="font-bold">MINT DATE - JUNE 2022</p>
+            </div>
+            <div className="flex flex-col items-end">
+              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
+                WITHOUT MASK SOCIETY
+              </h2>
+              <p className="font-bold">MINT DATE - JUNE 2022</p>
+            </div>
+            <div className="flex flex-col items-end">
+              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
+                WITHOUT MASK SOCIETY
+              </h2>
+              <p className="font-bold">MINT DATE - JUNE 2022</p>
+            </div>
           </div>
+          <div className="w-full">
+            <div className="flex justify-end">
+              <StaticImage className="w-28" src="../images/1.png" alt="" />
+            </div>
 
-          <StaticImage src="../images/astronauts.png" alt="" />
+            <div className="flex">
+              <StaticImage className="w-28" src="../images/1.png" alt="" />
+            </div>
+
+            <div className="flex justify-end">
+              <StaticImage className="w-28" src="../images/1.png" alt="" />
+            </div>
+
+            <div className="flex">
+              <StaticImage className="w-28" src="../images/1.png" alt="" />
+            </div>
+
+            <div className="flex justify-end">
+              <StaticImage className="w-28" src="../images/1.png" alt="" />
+            </div>
+
+            <div className="flex">
+              <StaticImage className="w-28" src="../images/1.png" alt="" />
+            </div>
+          </div>
         </div>
       </section>
 

@@ -9,8 +9,8 @@
 @import "glow.css";
 @import "hamburger.css";
 @import "fancy-grid.css";
-
 @import "roadmap.css";
+@import "scotch.css";
 
 .prose strong {
   color: #e41388;
@@ -54,14 +54,14 @@
 }
 
 html {
+  color: white;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-body {
-  color: white;
-  overflow-x: hidden;
-}
+/* body {
+  overflow: hidden;
+} */
 
 ::-webkit-scrollbar {
   width: 8px;
