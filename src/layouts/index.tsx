@@ -93,7 +93,7 @@ export const IndexLayout = ({}: Props) => {
         id="about"
         className="relative flex flex-col items-center w-full max-w-3xl p-4"
       >
-        <div className="relative my-12 -z-10">
+        <div className="relative my-24 -z-10">
           <div className="-rotate-12">
             <Polaroid>
               <StaticImage
@@ -130,9 +130,7 @@ export const IndexLayout = ({}: Props) => {
 
       <section id="welcome" className="relative">
         <div className="flex flex-col items-center w-full max-w-3xl p-4 mx-auto">
-          <Title>Welcome</Title>
-          <p>THIS IS YOUR CAPTAIN SPEAKING.</p>
-
+          <Title className="w-full text-left text-green-600">Welcome</Title>
           <p>
             “THE CREW IS READY FOR THE MISSION 22 SECONDS REMAINING AND COUNTING
             FOR LAUNCH THE OBJECTIVE OF THE MISSION WILL BE TO CONQUER THE
@@ -146,10 +144,7 @@ export const IndexLayout = ({}: Props) => {
         </div>
       </section>
 
-      <section
-        id="crew"
-        className="relative flex flex-col items-center w-full max-w-3xl p-4"
-      >
+      <section className="relative flex flex-col items-center w-full max-w-3xl p-4">
         <div className="my-12">
           <Polaroid className="-mb-[12rem] rotate-12">
             <StaticImage
@@ -162,7 +157,9 @@ export const IndexLayout = ({}: Props) => {
           <StaticImage src="../images/crew.png" alt="" />
         </div>
 
-        <Title className="w-full text-left">Crew</Title>
+        <Title id="crew" className="w-full text-left text-green-600">
+          Crew
+        </Title>
         <p>
           OUR CREW IS FROM ALL OF THE WORLD BASED IN SANTIAGO, CHILE. FROM OUR
           OPERATIONS CENTER IN POSTON DIGITAL ARTS, WITH MORE THAN 20 YEARS OF
@@ -180,10 +177,7 @@ export const IndexLayout = ({}: Props) => {
         </p>
       </section>
 
-      <section
-        id="crew"
-        className="relative flex flex-col items-center w-full max-w-3xl p-4"
-      >
+      <section className="relative flex flex-col items-center w-full max-w-3xl p-4">
         <div className="my-12">
           <Polaroid className="-mb-[12rem] rotate-12">
             <StaticImage
@@ -196,7 +190,9 @@ export const IndexLayout = ({}: Props) => {
           <StaticImage src="../images/astronauts.png" alt="" />
         </div>
 
-        <Title className="w-full text-left">Talents</Title>
+        <Title id="talents" className="w-full text-left text-green-600">
+          Talents
+        </Title>
         <p>
           SANTIAGO AGUILERA <br />
           ART DIRECTOR <br />
@@ -240,7 +236,7 @@ export const IndexLayout = ({}: Props) => {
 
       <section id="services" className="flex flex-col items-center w-full">
         <div className="flex flex-col items-center w-full max-w-3xl p-4">
-          <Title className="w-full text-left">Services</Title>
+          <Title className="w-full text-left text-green-600">Services</Title>
           <p className="font-bold">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi
             accusantium nesciunt magni quod ex magnam iusto harum earum est
@@ -260,7 +256,7 @@ export const IndexLayout = ({}: Props) => {
         id="roadmap"
         className="flex flex-col items-center w-full max-w-3xl p-4"
       >
-        <Title className="w-full text-left">Roadmap</Title>
+        <Title className="w-full text-left text-green-600">Roadmap</Title>
         <div className="flex w-full gap-8">
           <div className="flex flex-col justify-between w-full">
             <div className="flex flex-col items-end">

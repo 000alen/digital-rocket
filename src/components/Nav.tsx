@@ -71,25 +71,22 @@ export const Nav: React.FC<Props> = ({}) => {
           >
             TOP
           </NavLink>
-          <NavLink href="#about" onClick={() => setIsOpen(false)}>
-            ABOUT
-          </NavLink>
           <NavLink href="#welcome" onClick={() => setIsOpen(false)}>
             WELCOME
           </NavLink>
           <NavLink href="#crew" onClick={() => setIsOpen(false)}>
             CREW
           </NavLink>
-          <NavLink href="#roadmap" onClick={() => setIsOpen(false)}>
-            ROADMAP
-          </NavLink>
-          <NavLink href="#donation" onClick={() => setIsOpen(false)}>
-            DONATION
+          <NavLink href="#talents" onClick={() => setIsOpen(false)}>
+            TALENTS
           </NavLink>
           <NavLink href="#services" onClick={() => setIsOpen(false)}>
             SERVICES
           </NavLink>
 
+          <NavLink href="#roadmap" onClick={() => setIsOpen(false)}>
+            ROADMAP
+          </NavLink>
           {/* TODO: Use static query instead of hardcoding it */}
           <div className="flex flex-row items-center justify-center gap-2">
             <NavLink
