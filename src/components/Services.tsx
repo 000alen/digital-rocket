@@ -17,8 +17,9 @@ export const Services = (frontmatter: LandingFrontmatter) => {
 
       <div className="grid w-full h-full grid-cols-1 md:grid-cols-3">
         {frontmatter.services.map(
-          ({ service_name, service_description, service_markdown }) => (
+          ({ service_name, service_description, service_markdown }, i) => (
             <Service
+              key={i}
               service_name={service_name}
               service_description={service_description}
               service_markdown={service_markdown}

@@ -35,7 +35,7 @@ export const IndexLayout = (frontmatter: LandingFrontmatter) => {
 
       <Roadmap {...frontmatter} />
 
-      <Footer />
+      <Footer {...frontmatter} />
     </div>
   );
 };

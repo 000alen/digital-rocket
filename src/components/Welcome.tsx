@@ -8,7 +8,6 @@ import { Polaroid } from "./Polaroid";
 import { Title } from "./Title";
 
 export const Welcome = (frontmatter: LandingFrontmatter) => {
-  console.log(frontmatter.welcome_text);
   return (
     <section
       id="welcome"

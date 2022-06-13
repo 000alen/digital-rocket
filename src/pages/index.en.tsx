@@ -32,6 +32,8 @@ export const pageQuery = graphql`
           milestone_description
           milestone_title
           milestone_url
+          milestone_revealed
+          milestone_image
         }
         about_caption
         address

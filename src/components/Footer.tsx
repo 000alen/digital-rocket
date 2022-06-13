@@ -1,35 +1,43 @@
 import React from "react";
 
-import { DRLogo } from "./DRLogo";
+import { LandingFrontmatter } from "../typings";
 import { InstagramIcon } from "./icons/InstagramIcon";
+import { Markdown } from "./Markdown";
 
-interface Props {}
-
-export const Footer: React.FC<Props> = ({}) => {
+export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
   return (
-    <footer className="flex w-full p-8 bg-green-600 bg-opacity-50 border-t-2 border-green-400">
-      <p>
-        DIGITAL ROCKET STUDIOS
-        <br />
-        We work with brands to deliver NFT & Metaverse
-        <br />
-        projects. Address: Av. del Valle Nte. 961, Huechuraba, Región
-        Metropolitana, Chile <br />
-        Contact <br /> hello@digitalrocketstudios.io <br />
-        +56(2) 2374 8550
-      </p>
+    <footer className="flex flex-col items-center w-full gap-8 p-8 bg-black">
+      <div className="flex flex-col justify-around w-full gap-8 lg:flex-row">
+        <div className="w-full font-mono prose text-white marker:text-green-400 prose-invert">
+          <h3>
+            <strong>Digital Rocket</strong>
+          </h3>
+          <Markdown>{frontmatter.footer_text}</Markdown>
+          <Markdown>{`Address: ${frontmatter.address}`}</Markdown>
+        </div>
 
-      <div className="flex flex-col justify-between w-full gap-2">
-        <div className="flex items-start justify-between">
+        <div className="w-full font-mono prose text-white marker:text-green-400 prose-invert">
+          <h3>
+            <strong>Contact</strong>
+          </h3>
+          <Markdown>{`Phone: ${frontmatter.phone}`}</Markdown>
+          <Markdown>{`Email: ${frontmatter.email}`}</Markdown>
+        </div>
+
+        <div className="w-full font-mono prose text-white marker:text-green-400 prose-invert">
+          <h3>
+            <strong>Social Media</strong>
+          </h3>
           <a className="flex items-center gap-2">
             <InstagramIcon />
             <span>@digital_rocket_studio</span>
           </a>
-          <DRLogo className="w-24 h-24" />
         </div>
-
-        <p className="text-right">© DIGITAL ROCKET STUDIOS 2022 | Powered by POSTON DIGITAL ARTS</p>
       </div>
+
+      <p className="font-mono prose w-full !text-center text-white marker:text-green-400 prose-invert">
+        © DIGITAL ROCKET STUDIOS 2022 | Powered by POSTON DIGITAL ARTS
+      </p>
     </footer>
   );
 };

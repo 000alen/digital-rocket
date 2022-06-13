@@ -27,16 +27,14 @@ export const Talents = (frontmatter: LandingFrontmatter) => {
 
         <div className="font-mono prose text-white marker:text-green-400 prose-invert lg:prose-xl">
           {frontmatter.talents_people.map(
-            ({ person_name, person_position, person_description }) => (
-              <>
-                {person_name}
-                <br />
-                {person_position}
+            ({ person_name, person_position, person_description }, i) => (
+              <div key={i}>
+                <strong>{person_name}</strong> / <i>{person_position}</i>
                 <br />
                 {person_description}
                 <br />
                 <br />
-              </>
+              </div>
             )
           )}
         </div>

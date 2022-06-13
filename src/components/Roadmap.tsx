@@ -14,10 +14,14 @@ export const Roadmap = (frontmatter: LandingFrontmatter) => {
 
       <div className="grid w-full grid-cols-1 gap-8">
         {frontmatter.roadmap.map(
-          ({ milestone_title, milestone_description, milestone_url }) => (
+          ({ milestone_title, milestone_description, milestone_revealed, milestone_url, milestone_image }, i) => (
             <Milestone
+              key={i}
               milestone_title={milestone_title}
               milestone_description={milestone_description}
+              milestone_revealed={milestone_revealed}
+              milestone_url={milestone_url}
+              milestone_image={milestone_image}
             />
           )
         )}

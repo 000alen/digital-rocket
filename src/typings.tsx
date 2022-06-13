@@ -5,14 +5,16 @@ export interface LandingFrontmatter {
   roadmap: {
     milestone_description: string;
     milestone_title: string;
-    milestone_url: string
+    milestone_revealed: boolean;
+    milestone_url?: string;
+    milestone_image?: string;
   }[];
   about_caption: string;
   address: string;
   contact_text: string;
   contact_title: string;
   crew_title: string;
-  crew_text: string
+  crew_text: string;
   email: string;
   footer_text: string;
   footer_title: string;
@@ -33,8 +35,6 @@ export interface LandingFrontmatter {
   welcome_text: string;
   welcome_caption: string;
   talents_title: string;
-
-
 }
 
 export interface BlogEntryFrontmatter {
