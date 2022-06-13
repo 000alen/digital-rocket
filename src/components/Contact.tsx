@@ -54,7 +54,7 @@ export const Contact: React.FC<LandingFrontmatter> = () => {
   const postUrl = `https://gmail.us11.list-manage.com/subscribe/post?u=${"6199c04658e592bafab08cbd8"}&id=${"5a8cb64ae9"}`;
 
   return (
-    <section className="flex flex-col items-center justify-center w-full gap-8 p-8 bg-gradient-to-r from-purple-900 to-purple-500">
+    <section id="contact" className="flex flex-col items-center justify-center w-full gap-8 p-8 bg-gradient-to-r from-purple-900 to-purple-500">
       <Title>
         Got a Project?
         <br />

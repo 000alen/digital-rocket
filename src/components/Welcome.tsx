@@ -35,7 +35,7 @@ export const Welcome = (frontmatter: LandingFrontmatter) => {
             />
           </Polaroid>
 
-          <ReactMarkdown className="with-accent !absolute inset-0 text-center flex justify-center items-center font-[Aliseo] font-bold text-lg md:text-3xl lg:text-5xl">
+          <ReactMarkdown className="with-accent !absolute p-4 inset-0 text-center flex justify-center items-center font-[Aliseo] font-bold text-lg md:text-3xl lg:text-5xl">
             {frontmatter.welcome_caption}
           </ReactMarkdown>
         </div>

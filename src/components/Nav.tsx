@@ -83,12 +83,14 @@ export const Nav: React.FC<Props> = ({}) => {
           <NavLink href="#services" onClick={() => setIsOpen(false)}>
             SERVICES
           </NavLink>
-
           <NavLink href="#roadmap" onClick={() => setIsOpen(false)}>
             ROADMAP
           </NavLink>
+          <NavLink href="#contact" onClick={() => setIsOpen(false)}>
+            CONTACT
+          </NavLink>
           {/* TODO: Use static query instead of hardcoding it */}
-          {/* <div className="flex flex-row items-center justify-center gap-2">
+          <div className="flex flex-row items-center justify-center gap-2">
             <NavLink
               className="lg:text-green-400 !not-italic"
               href="/"
@@ -103,7 +105,7 @@ export const Nav: React.FC<Props> = ({}) => {
             >
               ES
             </NavLink>
-          </div> */}
+          </div>
         </div>
       </nav>
 
