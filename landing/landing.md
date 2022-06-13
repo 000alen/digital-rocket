@@ -102,27 +102,36 @@ roadmap:
   - milestone_title: WITHOUT MASK SOCIETY
     milestone_description: Q2 2022
     milestone_url: www.withoutmasksociety.io
+    milestone_revealed: true
+    milestone_image: /assets/364.png
   - milestone_title: HAPPYICE
     milestone_description: Q4 2022
     milestone_url: .
+    milestone_revealed: false
   - milestone_title: RETROTV
     milestone_description: Q4 2023
     milestone_url: .
+    milestone_revealed: false
   - milestone_title: FUNNY COOKIES
     milestone_description: Q4 2023
     milestone_url: .
+    milestone_revealed: false
   - milestone_title: MAGICAL BIRTHDAY ELF
     milestone_description: Q2 2024
     milestone_url: .
+    milestone_revealed: false
   - milestone_title: CRYPTO ANGELS
     milestone_description: Q2 2024
     milestone_url: .
+    milestone_revealed: false
   - milestone_title: MAGIC TREES
     milestone_description: Q2 2025
     milestone_url: .
+    milestone_revealed: false
   - milestone_title: METAFOREST
     milestone_description: Q2 2025
     milestone_url: .
+    milestone_revealed: false
 contact_title: .
 contact_text: .
 footer_title: DIGITAL ROCKET STUDIOS
