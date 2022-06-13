@@ -12,6 +12,10 @@
 @import "roadmap.css";
 @import "scotch.css";
 
+.with-accent strong {
+  color: rgb(22 163 74);
+}
+
 .prose strong {
   color: #e41388;
 }
@@ -53,7 +57,8 @@
   transform: translateY(-2px);
 }
 
-html, body {
+html,
+body {
   color: white;
   overflow-x: hidden;
   scroll-behavior: smooth;

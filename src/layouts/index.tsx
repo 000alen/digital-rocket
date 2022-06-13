@@ -1,22 +1,20 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useEffect, useRef } from "react";
 import { Helmet } from "react-helmet";
+import ReactMarkdown from "react-markdown";
 
 // @ts-ignore
 import Background from "../assets/file.mp4";
 import { Footer } from "../components/Footer";
-import { IdeaIcon } from "../components/icons/IdeaIcon";
+import { Markdown } from "../components/Markdown";
 import { Milestone } from "../components/Milestone";
 import { Nav } from "../components/Nav";
 import { Polaroid } from "../components/Polaroid";
 import { Service } from "../components/Service";
 import { Title } from "../components/Title";
-import { Unrevealed } from "../components/Unrevealed";
-import { lorem } from "../constants";
+import { LandingFrontmatter } from "../typings";
 
-interface Props {}
-
-export const IndexLayout = ({}: Props) => {
+export const IndexLayout = (frontmatter: LandingFrontmatter) => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
@@ -48,11 +46,11 @@ export const IndexLayout = ({}: Props) => {
         id="hero"
         className="relative flex flex-col items-center w-full max-w-3xl gap-8 p-4"
       >
-        <Title className="text-right">
-          Every mile of this <br />
-          <span className="text-green-600">JOURNEY</span> will be a <br />
-          Revolution.
-        </Title>
+        <h1 className="text-right font-[Aliseo] font-bold text-5xl">
+          <ReactMarkdown className="with-accent">
+            {frontmatter.about_caption}
+          </ReactMarkdown>
+        </h1>
 
         <div className="relative my-12 -z-10">
           <Polaroid className="!absolute hidden md:block top-12 -left-36 -rotate-12">
@@ -79,19 +77,8 @@ export const IndexLayout = ({}: Props) => {
         </div>
 
         <div>
-          <Title className="text-green-600">
-            NFT AND METAVERSE CONTENT DEVELOPER SPACE STATION
-          </Title>
-
-          <p className="font-bold">
-            JOIN US AND BE PART OF THE DIGITAL ROCKET CREW LET'S BE THE FIRST TO
-            STEP ON THE LAND OF THE NEW WORLD. EVERY MILE OF THIS JOURNEY WILL
-            BE A REVOLUTION.
-            <br />
-            <br />
-            HEY! DON'T MISS YOUR SEAT, WE'RE ABOUT TO DEPART …AND DON'T FORGET
-            TO ENJOY THE RIDE. WHAT WOULD YOU LIKE TO DRINK?
-          </p>
+          <Title className="text-green-600">{frontmatter.about_title}</Title>
+          <Markdown>{frontmatter.about_text}</Markdown>
         </div>
       </section>
 
@@ -110,9 +97,9 @@ export const IndexLayout = ({}: Props) => {
             </Polaroid>
 
             <h1 className="!absolute inset-0 text-center top-1/4 font-[Aliseo] font-bold text-3xl lg:text-5xl">
-              TAKEOFF!, WE HAVE TAKEOFF! <br />
-              <span className="text-green-600 ">DIGITAL ROCKET</span> IS ALREADY
-              IN SPACE
+              <ReactMarkdown className="with-accent">
+                {frontmatter.welcome_caption}
+              </ReactMarkdown>
             </h1>
           </div>
 
@@ -136,12 +123,11 @@ export const IndexLayout = ({}: Props) => {
 
       <section id="welcome" className="relative">
         <div className="flex flex-col items-center w-full max-w-3xl p-4 mx-auto">
-          <Title className="w-full text-left text-green-600">Welcome</Title>
+          <Title className="w-full text-left text-green-600">
+            {frontmatter.welcome_title}
+          </Title>
           <p>
-            “THE CREW IS READY FOR THE MISSION 22 SECONDS REMAINING AND COUNTING
-            FOR LAUNCH THE OBJECTIVE OF THE MISSION WILL BE TO CONQUER THE
-            IMPOSSIBLE. THE TANKS ARE FULL OF ENERGY. ASTRONAUTS AT THEIR POSTS
-            THE FIRING SEQUENCE BEGINS ALL ENGINES RUNNING”
+            <Markdown>{frontmatter.welcome_text}</Markdown>
           </p>
 
           <h2 className="font-[Aliseo] text-purple-600 self-start font-bold text-2xl mb-24">
@@ -164,22 +150,10 @@ export const IndexLayout = ({}: Props) => {
         </div>
 
         <Title id="crew" className="w-full text-left text-green-600">
-          Crew
+          {frontmatter.crew_title}
         </Title>
         <p>
-          OUR CREW IS FROM ALL OF THE WORLD BASED IN SANTIAGO, CHILE. FROM OUR
-          OPERATIONS CENTER IN POSTON DIGITAL ARTS, WITH MORE THAN 20 YEARS OF
-          EXPERIENCE, WE HAVE BUILT A SOLID COMPANY IN THE AUDIOVISUAL WORLD,
-          BOTH IN ADVERTISING AND CINEMA. <br />
-          <br />
-          WE HAVE LEADED PROJECTS FOR BIG BRANDS AND CUSTOMERS FROM ALL OVER THE
-          WORLD AND WE ARE CURRENTLY READY FOR THE NEXT ADVENTURE. <br />
-          <br />
-          THIS NEW WORLD IS CONNECTED WITH THE INTERESTS THAT THE ENTIRE CREW
-          HAS BEEN EXPLORING FOR YEARS. A SPACE WHERE THE BLOCKCHAIN IS OUR
-          CENTRAL AXIS AND OUR MOTIVATION IS TO CREATE AND BE CARRIED AWAY. I.V
-          THERE ARE PEOPLE WHO GET OUT OF THE BOX BEFORE OTHERS. I.V. HE DOES IT
-          EVERY DAY AND FINDS NEW WAYS TO HACK THIS MATRIX.
+          <Markdown>{frontmatter.crew_text}</Markdown>
         </p>
       </section>
 
@@ -199,57 +173,42 @@ export const IndexLayout = ({}: Props) => {
         <Title id="talents" className="w-full text-left text-green-600">
           Talents
         </Title>
-        <p>
-          SANTIAGO AGUILERA <br />
-          ART DIRECTOR <br />
-          DIRECTED MORE THAN 10,000 AUDIOVISUAL AND IMMERSIVE TECHNOLOGY
-          PROJECTS SUCCESSFULLY DELIVERED. VARIOUS AWARDS IN NUMEROUS FESTIVALS.{" "}
-          <br />
-          <br />
-          IVO VODANOVIC <br />
-          EXECUTIVE DIRECTOR
-          <br />
-          WITH MORE THAN TEN YEARS OF EXPERIENCE IN AUDIOVISUAL PRODUCTION, TEN
-          IN RETAIL AND THE LAST THREE DEDICATED TO THE BLOCKCHAIN WORLD, ENTERS
-          THIS WEB 3.0 CHALLENGE FROM THE CHILEAN PATAGONIA.
-          <br />
-          <br />
-          GONZALO POMÉS
-          <br />
-          EXECUTIVE PRODUCER
-          <br />
-          15 YEARS OF EXPERIENCE IN EXECUTIVE PRODUCTION FOR AUDIOVISUAL FILM
-          AND IMMERSIVE ADVERTISING TECHNOLOGY PROJECTS.
-          <br />
-          <br />
-          CLAUDIO VILLARROEL
-          <br />
-          CHIEF FINANCIAL OFFICER
-          <br />
-          MANAGER IN BANKING CORPORATIONS, SELF-TAUGHT TRADER OF THE FIAT AND
-          CRYPTO CURRENCIES. <br />
-          <br />
-          JOAQUIN MATAMALA
-          <br />
-          CREATIVE DIRECTOR
-          <br />
-          DURING THE LAST 15 YEARS HAS CREATED MULTIPLE DIGITAL & AUDIOVISUAL
-          CONTENT. DURING HIS CAREER, HE HAS DIRECTED DOCUMENTARIES, SHORT
-          FILMS, THREE TELEVISION SERIES AND IS CURRENTLY PRODUCING HIS FIRST
-          FEATURE FILM
-        </p>
+
+        <div className="font-mono prose text-white marker:text-green-400 prose-invert lg:prose-xl">
+          {frontmatter.talents_people.map(
+            ({ person_name, person_position, person_description }) => (
+              <>
+                {person_name}
+                <br />
+                {person_position}
+                <br />
+                {person_description}
+                <br />
+                <br />
+              </>
+            )
+          )}
+        </div>
       </section>
 
       <section id="services" className="flex flex-col items-center w-full">
         <div className="flex flex-col items-center w-full max-w-3xl p-4">
-          <Title className="w-full text-left text-green-600">Services</Title>
-          <p className="font-bold">{lorem}</p>
+          <Title className="w-full text-left text-green-600">
+            {frontmatter.services_title}
+          </Title>
+          <p className="font-bold">{frontmatter.services_text}</p>
         </div>
 
         <div className="grid w-full h-full grid-cols-1 md:grid-cols-3">
-          <Service />
-          <Service />
-          <Service />
+          {frontmatter.services.map(
+            ({ service_name, service_description, service_markdown }) => (
+              <Service
+                service_name={service_name}
+                service_description={service_description}
+                service_markdown={service_markdown}
+              />
+            )
+          )}
         </div>
       </section>
 
@@ -260,27 +219,16 @@ export const IndexLayout = ({}: Props) => {
         <Title className="w-full text-left text-green-600">Roadmap</Title>
 
         <div className="grid grid-cols-1 gap-8">
-          <Milestone />
-          <Milestone />
-          <Milestone />
-          <Milestone />
-          <Milestone />
-          <Milestone />
-          <Milestone />
+          {frontmatter.roadmap.map(
+            ({ milestone_title, milestone_description, milestone_url }) => (
+              <Milestone
+                milestone_title={milestone_title}
+                milestone_description={milestone_description}
+              />
+            )
+          )}
         </div>
       </section>
-
-      {/* <section className="flex items-center justify-center w-full gap-8 p-8 bg-gradient-to-r from-purple-900 to-purple-500">
-        <Title>
-          Got a Project?
-          <br />
-          We want to hear about it
-        </Title>
-
-        <div className="flex items-center justify-center w-32 h-32 text-center text-black rounded-full bg-cyan-300">
-          Get a Free Estimate!
-        </div>
-      </section> */}
 
       <Footer />
     </div>
