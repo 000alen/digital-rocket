@@ -29,7 +29,7 @@ export const Milestone: React.FC<Props> = ({
         {milestone_revealed && (
           <div className="font-mono prose text-white marker:text-green-400 prose-invert lg:prose-xl">
             <a href={milestone_url} target="_blank" className="">
-              {milestone_url!}
+              Go!
             </a>
           </div>
         )}
