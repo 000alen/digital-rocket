@@ -4,9 +4,12 @@ import { Helmet } from "react-helmet";
 
 // @ts-ignore
 import Background from "../assets/file.mp4";
+import { Footer } from "../components/Footer";
+import { IdeaIcon } from "../components/icons/IdeaIcon";
 import { Nav } from "../components/Nav";
 import { Polaroid } from "../components/Polaroid";
 import { Title } from "../components/Title";
+import { Unrevealed } from "../components/Unrevealed";
 
 interface Props {}
 
@@ -97,17 +100,17 @@ export const IndexLayout = ({}: Props) => {
           <div className="-rotate-12">
             <Polaroid>
               <StaticImage
-                className="w-[20rem] lg:w-[36rem]"
+                className="w-[20rem] md:w-[28rem] lg:w-[36rem]"
                 src="../images/planets_4.jpg"
                 alt=""
               />
             </Polaroid>
 
-            <Title className="absolute inset-0 text-center top-1/4">
+            <h1 className="absolute inset-0 text-center top-1/4 font-[Aliseo] font-bold text-3xl lg:text-5xl">
               TAKEOFF!, WE HAVE TAKEOFF! <br />
-              <span className="text-green-600">DIGITAL ROCKET</span> IS ALREADY
+              <span className="text-green-600 ">DIGITAL ROCKET</span> IS ALREADY
               IN SPACE
-            </Title>
+            </h1>
           </div>
 
           <div className="absolute -left-24 -bottom-24">
@@ -245,86 +248,102 @@ export const IndexLayout = ({}: Props) => {
           </p>
         </div>
 
-        <div className="flex w-full h-96">
-          <div className="w-full h-full bg-red-600"></div>
-          <div className="w-full h-full bg-green-600"></div>
-          <div className="w-full h-full bg-blue-600"></div>
+        <div className="grid w-full h-full grid-cols-1 md:grid-cols-3">
+          <div className="flex flex-col justify-around w-full h-full p-2 bg-black">
+            <div className="flex flex-col items-center gap-2">
+              <IdeaIcon className="w-24 h-24" />
+              <p>STRATEGY</p>
+            </div>
+            <div>
+              <p>
+                LET'S START PLANNING THE STRATEGY TO MAKE YOUR IDEA KNOWN TO THE
+                WORLD. LET'S DESIGN THE ROADMAP TO COVER EACH STAGE OF YOUR
+                PROJECT-
+              </p>
+              <p>
+                Defining a royalty strategy.
+                <br />
+                Building roadmaps covering every stage from design to launch.
+                <br />
+                Planning a community strategy.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-around w-full h-full p-2 bg-blue-600">
+            <div className="flex flex-col items-center gap-2">
+              <IdeaIcon className="w-24 h-24" />
+              <p>STRATEGY</p>
+            </div>
+            <div>
+              <p>
+                LET'S START PLANNING THE STRATEGY TO MAKE YOUR IDEA KNOWN TO THE
+                WORLD. LET'S DESIGN THE ROADMAP TO COVER EACH STAGE OF YOUR
+                PROJECT-
+              </p>
+              <p>
+                Defining a royalty strategy.
+                <br />
+                Building roadmaps covering every stage from design to launch.
+                <br />
+                Planning a community strategy.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex flex-col justify-around w-full h-full p-2 bg-yellow-600">
+            <div className="flex flex-col items-center gap-2">
+              <IdeaIcon className="w-24 h-24" />
+              <p>STRATEGY</p>
+            </div>
+            <div>
+              <p>
+                LET'S START PLANNING THE STRATEGY TO MAKE YOUR IDEA KNOWN TO THE
+                WORLD. LET'S DESIGN THE ROADMAP TO COVER EACH STAGE OF YOUR
+                PROJECT-
+              </p>
+              <p>
+                Defining a royalty strategy.
+                <br />
+                Building roadmaps covering every stage from design to launch.
+                <br />
+                Planning a community strategy.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       <section
         id="roadmap"
-        className="flex flex-col items-center w-full max-w-3xl p-4"
+        className="flex flex-col items-center content-center w-full max-w-3xl p-4 margin-auto"
       >
         <Title className="w-full text-left text-green-600">Roadmap</Title>
-        <div className="flex w-full gap-8">
-          <div className="flex flex-col justify-between w-full">
+
+        <div className="grid grid-cols-1 gap-8">
+          <div className="grid w-full grid-cols-2 place-items-center">
             <div className="flex flex-col items-end">
               <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
                 WITHOUT MASK SOCIETY
               </h2>
               <p className="font-bold">MINT DATE - JUNE 2022</p>
             </div>
-            <div className="flex flex-col items-end">
-              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                WITHOUT MASK SOCIETY
-              </h2>
-              <p className="font-bold">MINT DATE - JUNE 2022</p>
-            </div>
-            <div className="flex flex-col items-end">
-              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                WITHOUT MASK SOCIETY
-              </h2>
-              <p className="font-bold">MINT DATE - JUNE 2022</p>
-            </div>
-            <div className="flex flex-col items-end">
-              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                WITHOUT MASK SOCIETY
-              </h2>
-              <p className="font-bold">MINT DATE - JUNE 2022</p>
-            </div>
-            <div className="flex flex-col items-end">
-              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                WITHOUT MASK SOCIETY
-              </h2>
-              <p className="font-bold">MINT DATE - JUNE 2022</p>
-            </div>
-            <div className="flex flex-col items-end">
-              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                WITHOUT MASK SOCIETY
-              </h2>
-              <p className="font-bold">MINT DATE - JUNE 2022</p>
-            </div>
-            <div className="flex flex-col items-end">
-              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                WITHOUT MASK SOCIETY
-              </h2>
-              <p className="font-bold">MINT DATE - JUNE 2022</p>
+
+            <div className="flex">
+              <StaticImage className="w-28" src="../images/1.png" alt="" />
             </div>
           </div>
-          <div className="w-full">
-            <div className="flex justify-end">
-              <StaticImage className="w-28" src="../images/1.png" alt="" />
-            </div>
 
-            <div className="flex">
-              <StaticImage className="w-28" src="../images/1.png" alt="" />
-            </div>
-
-            <div className="flex justify-end">
-              <StaticImage className="w-28" src="../images/1.png" alt="" />
-            </div>
-
-            <div className="flex">
-              <StaticImage className="w-28" src="../images/1.png" alt="" />
+          <div className="grid w-full grid-cols-2 place-items-center">
+            <div className="flex flex-col items-end">
+              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
+                WITHOUT MASK SOCIETY
+              </h2>
+              <p className="font-bold">MINT DATE - JUNE 2022</p>
             </div>
 
             <div className="flex justify-end">
-              <StaticImage className="w-28" src="../images/1.png" alt="" />
-            </div>
-
-            <div className="flex">
-              <StaticImage className="w-28" src="../images/1.png" alt="" />
+              <Unrevealed />
             </div>
           </div>
         </div>
@@ -341,6 +360,8 @@ export const IndexLayout = ({}: Props) => {
           Get a Free Estimate!
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 };

@@ -1,35 +1,35 @@
 import React from "react";
 
 import { DRLogo } from "./DRLogo";
-import { FancyButton } from "./FancyButton";
-import { DiscordIcon } from "./icons/DiscordIcon";
 import { InstagramIcon } from "./icons/InstagramIcon";
-import { OpenseaIcon } from "./icons/OpenseaIcon";
-import { TwitterIcon } from "./icons/TwitterIcon";
-import { Mailing } from "./Mailing";
-import { WMSLogo } from "./WMSLogo";
 
 interface Props {}
 
 export const Footer: React.FC<Props> = ({}) => {
   return (
-    <footer className="flex justify-between h-24 gap-2 p-8 bg-green-600 bg-opacity-50 border-t-2 border-green-400">
-      <div className="flex items-center justify-center gap-2">
-        <a href="" target="_blank">
-          <TwitterIcon />
-        </a>
-        <a href="" target="_blank">
-          <InstagramIcon />
-        </a>
-        <a href="" target="_blank">
-          <DiscordIcon />
-        </a>
-        <a href="" target="_blank">
-          <OpenseaIcon />
-        </a>
-      </div>
+    <footer className="flex w-full p-8 bg-green-600 bg-opacity-50 border-t-2 border-green-400">
+      <p>
+        DIGITAL ROCKET STUDIOS
+        <br />
+        We work with brands to deliver NFT & Metaverse
+        <br />
+        projects. Address: Av. del Valle Nte. 961, Huechuraba, Región
+        Metropolitana, Chile <br />
+        Contact <br /> hello@digitalrocketstudios.io <br />
+        +56(2) 2374 8550
+      </p>
 
-      <DRLogo className="translate-y-[-60%] w-36 h-36" />
+      <div className="flex flex-col justify-between w-full gap-2">
+        <div className="flex items-start justify-between">
+          <a className="flex items-center gap-2">
+            <InstagramIcon />
+            <span>@digital_rocket_studio</span>
+          </a>
+          <DRLogo className="w-24 h-24" />
+        </div>
+
+        <p className="text-right">© DIGITAL ROCKET STUDIOS 2022 | Powered by POSTON DIGITAL ARTS</p>
+      </div>
     </footer>
   );
 };

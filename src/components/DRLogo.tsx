@@ -10,7 +10,7 @@ export const DRLogo = React.forwardRef<unknown, Props>(
     return (
       <StaticImage
         className={`${className} select-none`}
-        src="../images/DRLogo.png"
+        src="../images/logo.png"
         alt="Digital Rocket Logo"
       />
     );

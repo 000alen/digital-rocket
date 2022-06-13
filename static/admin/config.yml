@@ -21,6 +21,69 @@ collections:
         }
       - { name: title, widget: hidden, default: "landing" }
 
+      - { name: about_image, widget: image }
+      - { name: about_caption, widget: markdown }
+      - { name: about_title }
+      - { name: about_text, widget: markdown }
+
+      - { name: welcome_image, widget: image }
+      - { name: welcome_caption, widget: markdown }
+      - { name: welcome_title }
+      - { name: welcome_text, widget: markdown }
+
+      - { name: crew_image, widget: image }
+      - { name: crew_title }
+      - { name: crew_text, widget: markdown }
+
+      - { name: talents_image, widget: image }
+      - { name: talents_title }
+      - {
+          name: talents_people,
+          widget: list,
+          fields:
+            [
+              { name: person_name },
+              { name: person_position },
+              { name: person_description, widget: markdown },
+            ],
+        }
+
+      - { name: services_title }
+      - { name: services_text, widget: markdown }
+      - {
+          name: services,
+          widget: list,
+          fields:
+            [
+              { name: service_name },
+              { name: service_description },
+              { name: service_markdown, widget: markdown },
+            ],
+        }
+
+      - { name: roadmap_title }
+      - {
+          name: roadmap,
+          widget: list,
+          fields:
+            [
+              { name: milestone_title },
+              { name: milestone_description },
+              { name: milestone_url },
+              { name: milestone_image, widget: image },
+            ],
+        }
+
+      - { name: contact_title, widget: markdown }
+      - { name: contact_text, widget: markdown }
+
+      - { name: footer_title, widget: markdown }
+      - { name: footer_text, widget: markdown }
+
+      - { name: address }
+      - { name: email }
+      - { name: phone }
+
   - name: blog
     label: Blog
     folder: blog
