@@ -115,6 +115,16 @@ export const Nav: React.FC<Props> = ({}) => {
           <div className="bar"></div>
         </div>
       </div>
+
+      <div className="fixed bottom-0 right-0 z-50 p-12">
+        <a href="#" className="font-bold text-green-400">LET'S WORK!</a>
+        {/* <div
+          className={`${isOpen ? "checked" : ""} w-6 h-6 hamburger`}
+          onClick={() => setIsOpen((p) => !p)}
+        >
+          <div className="bar"></div>
+        </div> */}
+      </div>
     </>
   );
 };

@@ -6,8 +6,10 @@ import { Helmet } from "react-helmet";
 import Background from "../assets/file.mp4";
 import { Footer } from "../components/Footer";
 import { IdeaIcon } from "../components/icons/IdeaIcon";
+import { Milestone } from "../components/Milestone";
 import { Nav } from "../components/Nav";
 import { Polaroid } from "../components/Polaroid";
+import { Service } from "../components/Service";
 import { Title } from "../components/Title";
 import { Unrevealed } from "../components/Unrevealed";
 import { lorem } from "../constants";
@@ -150,7 +152,7 @@ export const IndexLayout = ({}: Props) => {
 
       <section className="relative flex flex-col items-center w-full max-w-3xl p-4">
         <div className="my-12">
-          <Polaroid className="-mb-[12rem] rotate-12">
+          <Polaroid className="-mb-[12rem] ml-36 rotate-12">
             <StaticImage
               className="w-[20rem] lg:w-[36rem]"
               src="../images/moon.webp"
@@ -183,7 +185,7 @@ export const IndexLayout = ({}: Props) => {
 
       <section className="relative flex flex-col items-center w-full max-w-3xl p-4">
         <div className="my-12">
-          <Polaroid className="-mb-[12rem] rotate-12">
+          <Polaroid className="-mb-[12rem] ml-36 rotate-12">
             <StaticImage
               className="w-[20rem] lg:w-[36rem]"
               src="../images/moon.webp"
@@ -245,68 +247,9 @@ export const IndexLayout = ({}: Props) => {
         </div>
 
         <div className="grid w-full h-full grid-cols-1 md:grid-cols-3">
-          <div className="flex flex-col justify-around w-full h-full p-2 bg-black">
-            <div className="flex flex-col items-center gap-2">
-              <IdeaIcon className="w-24 h-24" />
-              <p>STRATEGY</p>
-            </div>
-            <div>
-              <p>
-                LET'S START PLANNING THE STRATEGY TO MAKE YOUR IDEA KNOWN TO THE
-                WORLD. LET'S DESIGN THE ROADMAP TO COVER EACH STAGE OF YOUR
-                PROJECT-
-              </p>
-              <p>
-                Defining a royalty strategy.
-                <br />
-                Building roadmaps covering every stage from design to launch.
-                <br />
-                Planning a community strategy.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-around w-full h-full p-2 bg-blue-600">
-            <div className="flex flex-col items-center gap-2">
-              <IdeaIcon className="w-24 h-24" />
-              <p>STRATEGY</p>
-            </div>
-            <div>
-              <p>
-                LET'S START PLANNING THE STRATEGY TO MAKE YOUR IDEA KNOWN TO THE
-                WORLD. LET'S DESIGN THE ROADMAP TO COVER EACH STAGE OF YOUR
-                PROJECT-
-              </p>
-              <p>
-                Defining a royalty strategy.
-                <br />
-                Building roadmaps covering every stage from design to launch.
-                <br />
-                Planning a community strategy.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex flex-col justify-around w-full h-full p-2 bg-yellow-600">
-            <div className="flex flex-col items-center gap-2">
-              <IdeaIcon className="w-24 h-24" />
-              <p>STRATEGY</p>
-            </div>
-            <div>
-              <p>
-                LET'S START PLANNING THE STRATEGY TO MAKE YOUR IDEA KNOWN TO THE
-                WORLD. LET'S DESIGN THE ROADMAP TO COVER EACH STAGE OF YOUR
-                PROJECT-
-              </p>
-              <p>
-                Defining a royalty strategy.
-                <br />
-                Building roadmaps covering every stage from design to launch.
-                <br />
-                Planning a community strategy.
-              </p>
-            </div>
-          </div>
+          <Service />
+          <Service />
+          <Service />
         </div>
       </section>
 
@@ -317,35 +260,17 @@ export const IndexLayout = ({}: Props) => {
         <Title className="w-full text-left text-green-600">Roadmap</Title>
 
         <div className="grid grid-cols-1 gap-8">
-          <div className="grid w-full grid-cols-2 place-items-center">
-            <div className="flex flex-col items-end">
-              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                WITHOUT MASK SOCIETY
-              </h2>
-              <p className="font-bold">MINT DATE - JUNE 2022</p>
-            </div>
-
-            <div className="flex">
-              <StaticImage className="w-28" src="../images/1.png" alt="" />
-            </div>
-          </div>
-
-          <div className="grid w-full grid-cols-2 place-items-center">
-            <div className="flex flex-col items-end">
-              <h2 className="font-[Aliseo] text-purple-600 font-bold text-2xl">
-                WITHOUT MASK SOCIETY
-              </h2>
-              <p className="font-bold">MINT DATE - JUNE 2022</p>
-            </div>
-
-            <div className="flex justify-end">
-              <Unrevealed />
-            </div>
-          </div>
+          <Milestone />
+          <Milestone />
+          <Milestone />
+          <Milestone />
+          <Milestone />
+          <Milestone />
+          <Milestone />
         </div>
       </section>
 
-      <section className="flex items-center justify-center w-full gap-8 p-8 bg-gradient-to-r from-purple-900 to-purple-500">
+      {/* <section className="flex items-center justify-center w-full gap-8 p-8 bg-gradient-to-r from-purple-900 to-purple-500">
         <Title>
           Got a Project?
           <br />
@@ -355,7 +280,7 @@ export const IndexLayout = ({}: Props) => {
         <div className="flex items-center justify-center w-32 h-32 text-center text-black rounded-full bg-cyan-300">
           Get a Free Estimate!
         </div>
-      </section>
+      </section> */}
 
       <Footer />
     </div>

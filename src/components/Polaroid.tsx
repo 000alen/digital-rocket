@@ -16,7 +16,7 @@ export const Polaroid: React.FC<Props> = ({
   return (
     <div className={className}>
       <div
-        className="relative flex flex-col gap-2 p-2 bg-white w-min"
+        className="relative flex flex-col gap-2 p-2 mx-auto bg-white w-min"
       >
         {scotch && (
           <>
