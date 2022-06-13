@@ -10,6 +10,7 @@ import { Nav } from "../components/Nav";
 import { Polaroid } from "../components/Polaroid";
 import { Title } from "../components/Title";
 import { Unrevealed } from "../components/Unrevealed";
+import { lorem } from "../constants";
 
 interface Props {}
 
@@ -52,7 +53,7 @@ export const IndexLayout = ({}: Props) => {
         </Title>
 
         <div className="relative my-12 -z-10">
-          <Polaroid className="absolute hidden md:block top-12 -left-36 -rotate-12">
+          <Polaroid className="!absolute hidden md:block top-12 -left-36 -rotate-12">
             <StaticImage
               className="w-48"
               src="../images/santiago.webp"
@@ -69,7 +70,7 @@ export const IndexLayout = ({}: Props) => {
           </Polaroid>
 
           <StaticImage
-            className="absolute bottom-0 -right-8"
+            className="!absolute bottom-0 -right-8"
             src="../images/rocket.png"
             alt=""
           />
@@ -106,14 +107,14 @@ export const IndexLayout = ({}: Props) => {
               />
             </Polaroid>
 
-            <h1 className="absolute inset-0 text-center top-1/4 font-[Aliseo] font-bold text-3xl lg:text-5xl">
+            <h1 className="!absolute inset-0 text-center top-1/4 font-[Aliseo] font-bold text-3xl lg:text-5xl">
               TAKEOFF!, WE HAVE TAKEOFF! <br />
               <span className="text-green-600 ">DIGITAL ROCKET</span> IS ALREADY
               IN SPACE
             </h1>
           </div>
 
-          <div className="absolute -left-24 -bottom-24">
+          <div className="!absolute -left-24 -bottom-24">
             <div className="relative">
               <StaticImage
                 className="w-96"
@@ -122,7 +123,7 @@ export const IndexLayout = ({}: Props) => {
               />
 
               <StaticImage
-                className="absolute w-56 -left-24 -bottom-20"
+                className="!absolute w-56 -left-24 -bottom-20"
                 src="../images/thingy.webp"
                 alt=""
               />
@@ -240,12 +241,7 @@ export const IndexLayout = ({}: Props) => {
       <section id="services" className="flex flex-col items-center w-full">
         <div className="flex flex-col items-center w-full max-w-3xl p-4">
           <Title className="w-full text-left text-green-600">Services</Title>
-          <p className="font-bold">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. A, eligendi
-            accusantium nesciunt magni quod ex magnam iusto harum earum est
-            accusamus excepturi natus soluta eaque officiis ipsa. Officiis,
-            praesentium exercitationem?
-          </p>
+          <p className="font-bold">{lorem}</p>
         </div>
 
         <div className="grid w-full h-full grid-cols-1 md:grid-cols-3">

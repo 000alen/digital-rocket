@@ -20,8 +20,8 @@ export const Polaroid: React.FC<Props> = ({
       >
         {scotch && (
           <>
-            <div className="absolute -left-8 -top-8 scotch"></div>
-            <div className="absolute -right-8 -top-8 scotch-right"></div>
+            <div className="!absolute -left-8 -top-8 scotch"></div>
+            <div className="!absolute -right-8 -top-8 scotch-right"></div>
           </>
         )}
         {children}
