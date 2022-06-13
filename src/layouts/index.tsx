@@ -2,6 +2,7 @@ import React from "react";
 import { Helmet } from "react-helmet";
 
 import { Background } from "../components/Background";
+import { Contact } from "../components/Contact";
 import { Crew } from "../components/Crew";
 import { Footer } from "../components/Footer";
 import { Hero } from "../components/Hero";
@@ -34,6 +35,8 @@ export const IndexLayout = (frontmatter: LandingFrontmatter) => {
       <Services {...frontmatter} />
 
       <Roadmap {...frontmatter} />
+
+      <Contact {...frontmatter} />
 
       <Footer {...frontmatter} />
     </div>

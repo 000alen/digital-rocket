@@ -13,6 +13,18 @@ export const Welcome = (frontmatter: LandingFrontmatter) => {
       id="welcome"
       className="relative flex flex-col items-center w-full max-w-3xl gap-8 p-4"
     >
+      <div className="w-full">
+        <Title className="w-full text-left text-green-600">
+          {frontmatter.welcome_title}
+        </Title>
+
+        <Markdown className="!w-full">{frontmatter.welcome_text}</Markdown>
+
+        <h2 className="font-[Aliseo] text-purple-600 self-start font-bold text-2xl">
+          IGNITION
+        </h2>
+      </div>
+
       <div className="relative my-24 -z-10">
         <div className="-rotate-12">
           <Polaroid>
@@ -23,12 +35,12 @@ export const Welcome = (frontmatter: LandingFrontmatter) => {
             />
           </Polaroid>
 
-          <ReactMarkdown className="with-accent !absolute inset-0 text-center top-1/4 font-[Aliseo] font-bold text-3xl lg:text-5xl">
+          <ReactMarkdown className="with-accent !absolute inset-0 text-center flex justify-center items-center font-[Aliseo] font-bold text-lg md:text-3xl lg:text-5xl">
             {frontmatter.welcome_caption}
           </ReactMarkdown>
         </div>
 
-        <div className="!absolute -left-24 -bottom-24">
+        <div className="!absolute -left-24 -bottom-40 md:-left-36 md:-bottom-36 lg:-bottom-24">
           <div className="relative">
             <StaticImage
               className="w-96"
@@ -43,19 +55,6 @@ export const Welcome = (frontmatter: LandingFrontmatter) => {
             />
           </div>
         </div>
-      </div>
-
-      {/* <div className="flex flex-col items-center w-full p-4"> */}
-      <div className="w-full">
-        <Title className="w-full text-left text-green-600">
-          {frontmatter.welcome_title}
-        </Title>
-
-        <Markdown className="!w-full">{frontmatter.welcome_text}</Markdown>
-
-        <h2 className="font-[Aliseo] text-purple-600 self-start font-bold text-2xl mb-24">
-          IGNITION
-        </h2>
       </div>
     </section>
   );

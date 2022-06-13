@@ -88,7 +88,7 @@ export const Nav: React.FC<Props> = ({}) => {
             ROADMAP
           </NavLink>
           {/* TODO: Use static query instead of hardcoding it */}
-          <div className="flex flex-row items-center justify-center gap-2">
+          {/* <div className="flex flex-row items-center justify-center gap-2">
             <NavLink
               className="lg:text-green-400 !not-italic"
               href="/"
@@ -103,7 +103,7 @@ export const Nav: React.FC<Props> = ({}) => {
             >
               ES
             </NavLink>
-          </div>
+          </div> */}
         </div>
       </nav>
 
@@ -115,10 +115,6 @@ export const Nav: React.FC<Props> = ({}) => {
           <div className="bar"></div>
         </div>
       </div>
-
-      {/* <div className="fixed bottom-0 right-0 z-50 p-12">
-        <a href="#" className="font-bold text-green-400">LET'S WORK!</a>
-      </div> */}
     </>
   );
 };

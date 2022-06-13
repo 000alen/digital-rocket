@@ -26,6 +26,13 @@ export const Milestone: React.FC<Props> = ({
           {milestone_title}
         </h2>
         <Markdown>{milestone_description}</Markdown>
+        {milestone_revealed && (
+          <div className="font-mono prose text-white marker:text-green-400 prose-invert lg:prose-xl">
+            <a href={milestone_url} target="_blank" className="">
+              {milestone_url!}
+            </a>
+          </div>
+        )}
       </div>
 
       <div className="flex">

@@ -5,6 +5,8 @@ import { Markdown } from "./Markdown";
 import { Service } from "./Service";
 import { Title } from "./Title";
 
+const COLORS = ["#000000", "#0E2F5B", "#626462"];
+
 export const Services = (frontmatter: LandingFrontmatter) => {
   return (
     <section id="services" className="flex flex-col items-center w-full">
@@ -20,6 +22,7 @@ export const Services = (frontmatter: LandingFrontmatter) => {
           ({ service_name, service_description, service_markdown }, i) => (
             <Service
               key={i}
+              color={COLORS[i]}
               service_name={service_name}
               service_description={service_description}
               service_markdown={service_markdown}

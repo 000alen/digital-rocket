@@ -21,15 +21,29 @@ export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
             <strong>Contact</strong>
           </h3>
           <Markdown>{`Phone: ${frontmatter.phone}`}</Markdown>
-          <Markdown>{`Email: ${frontmatter.email}`}</Markdown>
+
+          <div className="font-mono prose text-white marker:text-green-400 prose-invert lg:prose-xl">
+            Email:{" "}
+            <a
+              href={`mailto:${frontmatter.email}`}
+              target="_blank"
+              className=""
+            >
+              {frontmatter.email}
+            </a>
+          </div>
         </div>
 
         <div className="w-full font-mono prose text-white marker:text-green-400 prose-invert">
           <h3>
             <strong>Social Media</strong>
           </h3>
-          <a className="flex items-center gap-2">
-            <InstagramIcon />
+          <a
+            href="https://www.instagram.com/digital_rocket_studio/"
+            target="_blank"
+            className="flex items-center gap-2"
+          >
+            <InstagramIcon className="w-6 h-6 fill-[#e41388]" />
             <span>@digital_rocket_studio</span>
           </a>
         </div>
