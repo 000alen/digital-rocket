@@ -105,6 +105,7 @@ roadmap:
     milestone_description: MINT DATE - JUNE 2022
     milestone_url: https://www.withoutmasksociety.io/
     milestone_revealed: true
+    milestone_image: /assets/punk.jpg
   - milestone_title: HAPPYICE
     milestone_description: MINT DATE - SEPTEMBER 2022
     milestone_revealed: false
