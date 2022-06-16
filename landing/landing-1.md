@@ -126,8 +126,6 @@ roadmap:
   - milestone_title: METAFOREST
     milestone_description: MINT DATE - DECEMBER  2023
     milestone_revealed: false
-footer_copyright: © DIGITAL ROCKET STUDIOS 2022 | Desarrollado por POSTON DIGITAL ARTS
-contact_text: .
 contact_title: |-
   TIENES UN PROYECTO?
 
@@ -138,7 +136,11 @@ footer_title: Digital Rocket Studios
 footer_text: Trabajamos con marcas para realizar proyectos NFT y Metaverso.
 footer_contact: Contacto
 footer_social: Redes Sociales
+footer_copyright: © DIGITAL ROCKET STUDIOS 2022 | Desarrollado por POSTON DIGITAL ARTS
 address: Av. del Valle Nte. 961, Huechuraba, Región Metropolitana, Chile
 email: hello@digitalrocketstudios.io
 phone: +56(2) 2374 8550
+instagram_handle: "@digital_rocket_studio"
+instagram_url: https://www.instagram.com/digital_rocket_studio/
+contact_text: .
 ---
