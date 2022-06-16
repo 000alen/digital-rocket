@@ -12,7 +12,7 @@ export const Talents = (frontmatter: LandingFrontmatter) => {
         <Polaroid className="-mb-[12rem] ml-36 rotate-12">
           <StaticImage
             className="w-[20rem] lg:w-[36rem]"
-            src="../images/moon.webp"
+            src="../images/moon_2b.jpg"
             alt=""
           />
         </Polaroid>

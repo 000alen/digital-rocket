@@ -8,6 +8,10 @@ import { Polaroid } from "./Polaroid";
 import { Title } from "./Title";
 
 export const Welcome = (frontmatter: LandingFrontmatter) => {
+  // const style: React.CSSProperties = {
+  //   maskImage: "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))",
+  // };
+
   return (
     <section
       id="welcome"
@@ -43,6 +47,7 @@ export const Welcome = (frontmatter: LandingFrontmatter) => {
         <div className="!absolute -left-24 -bottom-40 md:-left-36 md:-bottom-36 lg:-bottom-24">
           <div className="relative">
             <StaticImage
+              // style={style}
               className="w-96"
               src="../images/astronaut_1.png"
               alt=""
