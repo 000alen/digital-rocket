@@ -22,7 +22,7 @@ export default ({ data }: Props) => {
 export const pageQuery = graphql`
   {
     markdownRemark(
-      frontmatter: { title: { eq: "landing" }, language: { eq: "en" } }
+      frontmatter: { title: { eq: "landing" }, language: { eq: "es" } }
     ) {
       frontmatter {
         about_title

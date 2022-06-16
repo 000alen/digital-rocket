@@ -7,8 +7,8 @@ import { Title } from "./Title";
 
 export const Talents = (frontmatter: LandingFrontmatter) => {
   const style = {
-    "-webkit-mask-image": "linear-gradient(to top, black 0%, transparent 25%)",
-    "mask-image": "linear-gradient(to top, black 0%, transparent 25%)",
+    WebkitMaskImage: "linear-gradient(to top, black 0%, transparent 25%)",
+    maskImage: "linear-gradient(to top, black 0%, transparent 25%)",
   };
 
   return (
@@ -25,7 +25,6 @@ export const Talents = (frontmatter: LandingFrontmatter) => {
         <div className="relative">
           <StaticImage src="../images/astronauts.png" alt="" />
           <StaticImage
-            // @ts-ignore
             style={style}
             className="!absolute -z-10 origin-bottom inset-x-0 top-0 -scale-y-100"
             src="../images/astronauts.png"
@@ -36,7 +35,7 @@ export const Talents = (frontmatter: LandingFrontmatter) => {
 
       <div className="w-full">
         <Title id="talents" className="w-full text-left text-green-600">
-          Talents
+          {frontmatter.talents_title}
         </Title>
 
         <div className="font-mono prose text-white marker:text-green-400 prose-invert lg:prose-xl">

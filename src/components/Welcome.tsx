@@ -9,8 +9,8 @@ import { Title } from "./Title";
 
 export const Welcome = (frontmatter: LandingFrontmatter) => {
   const style = {
-    "-webkit-mask-image": "linear-gradient(to top, black 0%, transparent 100%)",
-    "mask-image": "linear-gradient(to top, black 0%, transparent 100%)",
+    WebkitMaskImage: "linear-gradient(to top, black 0%, transparent 100%)",
+    maskimage: "linear-gradient(to top, black 0%, transparent 100%)",
   };
 
   return (
@@ -55,7 +55,6 @@ export const Welcome = (frontmatter: LandingFrontmatter) => {
               />
 
               <StaticImage
-                // @ts-ignore
                 style={style}
                 className="!absolute origin-bottom inset-x-0 top-0 w-96 -scale-y-100"
                 src="../images/astronaut_1.png"

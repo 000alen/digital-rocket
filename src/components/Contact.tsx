@@ -1,5 +1,6 @@
 import React from "react";
 import MailchimpSubscribe from "react-mailchimp-subscribe";
+import ReactMarkdown from "react-markdown";
 
 import { LandingFrontmatter } from "../typings";
 import { Title } from "./Title";
@@ -50,16 +51,15 @@ export const Form: React.FC<FormProps> = ({ subscribe, status, message }) => {
   );
 };
 
-export const Contact: React.FC<LandingFrontmatter> = () => {
+export const Contact: React.FC<LandingFrontmatter> = (frontmatter) => {
   const postUrl = `https://gmail.us11.list-manage.com/subscribe/post?u=${"6199c04658e592bafab08cbd8"}&id=${"5a8cb64ae9"}`;
 
   return (
-    <section id="contact" className="flex flex-col items-center justify-center w-full gap-8 p-8 bg-gradient-to-r from-purple-900 to-purple-500">
-      <Title>
-        Got a Project?
-        <br />
-        We want to hear about it
-      </Title>
+    <section
+      id="contact"
+      className="flex flex-col items-center justify-center w-full gap-8 p-8 bg-gradient-to-r from-purple-900 to-purple-500"
+    >
+      <Title>{frontmatter.contact_title}</Title>
 
       <MailchimpSubscribe
         url={postUrl}
