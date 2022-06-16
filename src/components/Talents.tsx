@@ -7,8 +7,8 @@ import { Title } from "./Title";
 
 export const Talents = (frontmatter: LandingFrontmatter) => {
   const style = {
-    "-webkit-mask-image": "linear-gradient(to top, black 0%, transparent 100%)",
-    "mask-image": "linear-gradient(to top, black 0%, transparent 100%)",
+    "-webkit-mask-image": "linear-gradient(to top, black 0%, transparent 25%)",
+    "mask-image": "linear-gradient(to top, black 0%, transparent 25%)",
   };
 
   return (
