@@ -84,6 +84,8 @@ collections:
       - { name: address }
       - { name: email }
       - { name: phone }
+      - { name: instagram_handle }
+      - { name: instagram_url }
 
   - name: blog
     label: Blog

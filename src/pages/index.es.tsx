@@ -37,13 +37,20 @@ export const pageQuery = graphql`
         }
         about_caption
         address
-        contact_text
         contact_title
+        contact_placeholder
+        contact_button
         crew_title
         crew_text
+        instagram_handle
+        instagram_url
         email
-        footer_text
         footer_title
+        footer_text
+        footer_text
+        footer_contact
+        footer_social
+        footer_copyright
         phone
         services {
           service_markdown
