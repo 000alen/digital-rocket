@@ -103,7 +103,7 @@ roadmap:
     milestone_description: Q2 2022
     milestone_url: https://www.withoutmasksociety.io/
     milestone_revealed: true
-    milestone_image: /assets/364.png
+    milestone_image: /assets/punk.jpg
   - milestone_title: HAPPYICE
     milestone_description: Q4 2022
     milestone_url: .
