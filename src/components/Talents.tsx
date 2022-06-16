@@ -6,6 +6,11 @@ import { Polaroid } from "./Polaroid";
 import { Title } from "./Title";
 
 export const Talents = (frontmatter: LandingFrontmatter) => {
+  const style = {
+    "-webkit-mask-image": "linear-gradient(to top, black 0%, transparent 100%)",
+    "mask-image": "linear-gradient(to top, black 0%, transparent 100%)",
+  };
+
   return (
     <section className="relative flex flex-col items-center w-full max-w-3xl p-4">
       <div className="my-12">
@@ -17,7 +22,16 @@ export const Talents = (frontmatter: LandingFrontmatter) => {
           />
         </Polaroid>
 
-        <StaticImage src="../images/astronauts.png" alt="" />
+        <div className="relative">
+          <StaticImage src="../images/astronauts.png" alt="" />
+          <StaticImage
+            // @ts-ignore
+            style={style}
+            className="!absolute -z-10 origin-bottom inset-x-0 top-0 -scale-y-100"
+            src="../images/astronauts.png"
+            alt=""
+          />
+        </div>
       </div>
 
       <div className="w-full">

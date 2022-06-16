@@ -8,9 +8,10 @@ import { Polaroid } from "./Polaroid";
 import { Title } from "./Title";
 
 export const Welcome = (frontmatter: LandingFrontmatter) => {
-  // const style: React.CSSProperties = {
-  //   maskImage: "linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0))",
-  // };
+  const style = {
+    "-webkit-mask-image": "linear-gradient(to top, black 0%, transparent 100%)",
+    "mask-image": "linear-gradient(to top, black 0%, transparent 100%)",
+  };
 
   return (
     <section
@@ -46,12 +47,21 @@ export const Welcome = (frontmatter: LandingFrontmatter) => {
 
         <div className="!absolute -left-24 -bottom-40 md:-left-36 md:-bottom-36 lg:-bottom-24">
           <div className="relative">
-            <StaticImage
-              // style={style}
-              className="w-96"
-              src="../images/astronaut_1.png"
-              alt=""
-            />
+            <div className="relative">
+              <StaticImage
+                className="w-96"
+                src="../images/astronaut_1.png"
+                alt=""
+              />
+
+              <StaticImage
+                // @ts-ignore
+                style={style}
+                className="!absolute origin-bottom inset-x-0 top-0 w-96 -scale-y-100"
+                src="../images/astronaut_1.png"
+                alt=""
+              />
+            </div>
 
             <StaticImage
               className="!absolute w-56 -left-24 -bottom-20"
