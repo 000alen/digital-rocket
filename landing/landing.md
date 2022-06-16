@@ -132,13 +132,18 @@ roadmap:
     milestone_description: Q2 2025
     milestone_url: .
     milestone_revealed: false
+footer_copyright: © DIGITAL ROCKET STUDIOS 2022 | Powered by POSTON DIGITAL ARTS
+contact_text: .
 contact_title: |-
   GOT A PROJECT?
 
   WE WANT TO HEAR ABOUT IT
-contact_text: .
-footer_title: DIGITAL ROCKET STUDIOS
+contact_placeholder: Leave us your email!
+contact_button: Send
+footer_title: Digital Rocket Studios
 footer_text: We work with brands to deliver NFT & Metaverse projects.
+footer_contact: Contact
+footer_social: Social Media
 address: Av. del Valle Nte. 961, Huechuraba, Región Metropolitana, Chile
 email: hello@digitalrocketstudios.io
 phone: +56(2) 2374 8550
