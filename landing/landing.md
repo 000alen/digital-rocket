@@ -132,7 +132,9 @@ roadmap:
     milestone_description: Q2 2025
     milestone_url: .
     milestone_revealed: false
-contact_title: .
+contact_title: |-
+  GOT A PROJECT?
+  WE WANT TO HEAR ABOUT IT
 contact_text: .
 footer_title: DIGITAL ROCKET STUDIOS
 footer_text: We work with brands to deliver NFT & Metaverse projects.
