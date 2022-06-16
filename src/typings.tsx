@@ -11,13 +11,17 @@ export interface LandingFrontmatter {
   }[];
   about_caption: string;
   address: string;
-  contact_text: string;
   contact_title: string;
+  contact_placeholder: string;
+  contact_button: string;
   crew_title: string;
   crew_text: string;
   email: string;
   footer_text: string;
   footer_title: string;
+  footer_contact: string;
+  footer_social: string;
+  footer_copyright: string;
   phone: string;
   services: {
     service_markdown: string;

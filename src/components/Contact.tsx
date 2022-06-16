@@ -9,9 +9,15 @@ interface FormProps {
   subscribe: any;
   status: any;
   message: any;
+  frontmatter: LandingFrontmatter;
 }
 
-export const Form: React.FC<FormProps> = ({ subscribe, status, message }) => {
+export const Form: React.FC<FormProps> = ({
+  subscribe,
+  status,
+  message,
+  frontmatter,
+}) => {
   const [email, setEmail] = React.useState("");
 
   return (
@@ -30,7 +36,7 @@ export const Form: React.FC<FormProps> = ({ subscribe, status, message }) => {
       <input
         className="px-6 py-4 text-black rounded-full lg:w-96"
         type="email"
-        placeholder="Leave us your email!"
+        placeholder={frontmatter.contact_placeholder}
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         required
@@ -44,7 +50,7 @@ export const Form: React.FC<FormProps> = ({ subscribe, status, message }) => {
           className="bg-[#e41388] px-6 py-4 space-x-2 rounded-full hover:opacity-70 transition-all"
           type="submit"
         >
-          <span className="font-semibold">Send</span>
+          <span className="font-semibold">{frontmatter.contact_button}</span>
         </button>
       )}
     </form>
@@ -64,7 +70,12 @@ export const Contact: React.FC<LandingFrontmatter> = (frontmatter) => {
       <MailchimpSubscribe
         url={postUrl}
         render={({ subscribe, status, message }) => (
-          <Form subscribe={subscribe} status={status} message={message} />
+          <Form
+            subscribe={subscribe}
+            status={status}
+            message={message}
+            frontmatter={frontmatter}
+          />
         )}
       />
     </section>

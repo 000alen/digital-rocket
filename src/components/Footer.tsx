@@ -10,7 +10,7 @@ export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
       <div className="flex flex-col justify-around w-full gap-8 lg:flex-row">
         <div className="w-full font-mono prose text-white marker:text-green-400 prose-invert">
           <h3>
-            <strong>Digital Rocket</strong>
+            <strong>{frontmatter.footer_title}</strong>
           </h3>
           <Markdown>{frontmatter.footer_text}</Markdown>
           <Markdown>{`Address: ${frontmatter.address}`}</Markdown>
@@ -18,7 +18,7 @@ export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
 
         <div className="w-full font-mono prose text-white marker:text-green-400 prose-invert">
           <h3>
-            <strong>Contact</strong>
+            <strong>{frontmatter.footer_contact}</strong>
           </h3>
           <Markdown>{`Phone: ${frontmatter.phone}`}</Markdown>
 
@@ -36,7 +36,7 @@ export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
 
         <div className="w-full font-mono prose text-white marker:text-green-400 prose-invert">
           <h3>
-            <strong>Social Media</strong>
+            <strong>{frontmatter.footer_social}</strong>
           </h3>
           <a
             href="https://www.instagram.com/digital_rocket_studio/"
@@ -50,7 +50,7 @@ export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
       </div>
 
       <p className="font-mono prose w-full !text-center text-white marker:text-green-400 prose-invert">
-        © DIGITAL ROCKET STUDIOS 2022 | Powered by POSTON DIGITAL ARTS
+        {frontmatter.footer_copyright}
       </p>
     </footer>
   );
