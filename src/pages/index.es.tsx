@@ -37,6 +37,7 @@ export const pageQuery = graphql`
         }
         about_caption
         address
+        contact_nav_title
         contact_title
         contact_placeholder
         contact_button

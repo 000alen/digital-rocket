@@ -70,8 +70,7 @@ export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
             {frontmatter.roadmap_title}
           </NavLink>
           <NavLink href="#contact" onClick={() => setIsOpen(false)}>
-            {/* frontmatter.contact_title */}
-            CONTACT
+            {frontmatter.contact_nav_title}
           </NavLink>
           {/* TODO: Use static query instead of hardcoding it */}
           <div className="flex flex-row items-center justify-center gap-2">

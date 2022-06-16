@@ -11,6 +11,7 @@ export interface LandingFrontmatter {
   }[];
   about_caption: string;
   address: string;
+  contact_nav_title: string;
   contact_title: string;
   contact_placeholder: string;
   contact_button: string;
