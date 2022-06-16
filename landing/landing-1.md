@@ -126,6 +126,7 @@ roadmap:
   - milestone_title: METAFOREST
     milestone_description: MINT DATE - DECEMBER  2023
     milestone_revealed: false
+contact_nav_title: CONTACTO
 contact_title: |-
   TIENES UN PROYECTO?
 

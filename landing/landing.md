@@ -132,6 +132,7 @@ roadmap:
     milestone_description: Q2 2025
     milestone_url: .
     milestone_revealed: false
+contact_nav_title: CONTACT
 contact_title: |-
   GOT A PROJECT?
 
