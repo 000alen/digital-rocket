@@ -72,10 +72,14 @@ collections:
         }
 
       - { name: contact_title, widget: markdown }
-      - { name: contact_text, widget: markdown }
+      - { name: contact_placeholder }
+      - { name: contact_button }
 
       - { name: footer_title, widget: markdown }
       - { name: footer_text, widget: markdown }
+      - { name: footer_contact }
+      - { name: footer_social }
+      - { name: footer_copyright }
 
       - { name: address }
       - { name: email }
