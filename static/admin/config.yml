@@ -71,6 +71,7 @@ collections:
             ],
         }
 
+      - { name: contact_nav_title }
       - { name: contact_title, widget: markdown }
       - { name: contact_placeholder }
       - { name: contact_button }

@@ -22,7 +22,7 @@ export const IndexLayout = (frontmatter: LandingFrontmatter) => {
 
       <Background />
 
-      <Nav />
+      <Nav {...frontmatter} />
 
       <Hero {...frontmatter} />
 

@@ -1,23 +1,18 @@
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 
+import { LandingFrontmatter } from "../typings";
 import { DiscordIcon } from "./icons/DiscordIcon";
 import { InstagramIcon } from "./icons/InstagramIcon";
 import { OpenseaIcon } from "./icons/OpenseaIcon";
 import { TwitterIcon } from "./icons/TwitterIcon";
 
-interface Props {}
 interface NavLinkProps {
   className?: string;
   href: string;
   target?: string;
   onClick?: () => void;
   children: string;
-}
-
-interface NavIconProps {
-  href: string;
-  IconComponent: React.FC<{ className?: string }>;
 }
 
 const NavLink: React.FC<NavLinkProps> = ({
@@ -39,19 +34,7 @@ const NavLink: React.FC<NavLinkProps> = ({
   );
 };
 
-const NavIcon: React.FC<NavIconProps> = ({ href, IconComponent }) => {
-  return (
-    <a
-      className="transition-all hover:text-green-400"
-      href={href}
-      target="_blank"
-    >
-      <IconComponent className="w-6 h-6 transition-all hover:fill-green-400" />
-    </a>
-  );
-};
-
-export const Nav: React.FC<Props> = ({}) => {
+export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -72,21 +55,22 @@ export const Nav: React.FC<Props> = ({}) => {
             TOP
           </NavLink>
           <NavLink href="#welcome" onClick={() => setIsOpen(false)}>
-            WELCOME
+            {frontmatter.welcome_title}
           </NavLink>
           <NavLink href="#crew" onClick={() => setIsOpen(false)}>
-            CREW
+            {frontmatter.crew_title}
           </NavLink>
           <NavLink href="#talents" onClick={() => setIsOpen(false)}>
-            TALENTS
+            {frontmatter.talents_title}
           </NavLink>
           <NavLink href="#services" onClick={() => setIsOpen(false)}>
-            SERVICES
+            {frontmatter.services_title}
           </NavLink>
           <NavLink href="#roadmap" onClick={() => setIsOpen(false)}>
-            ROADMAP
+            {frontmatter.roadmap_title}
           </NavLink>
           <NavLink href="#contact" onClick={() => setIsOpen(false)}>
+            {/* frontmatter.contact_title */}
             CONTACT
           </NavLink>
           {/* TODO: Use static query instead of hardcoding it */}
