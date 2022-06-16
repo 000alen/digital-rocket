@@ -37,7 +37,8 @@ export const Milestone: React.FC<Props> = ({
 
       <div className="flex">
         {milestone_revealed ? (
-          <StaticImage className="w-28" src="../images/punk.jpg" alt="" />
+          // <StaticImage className="w-28" src="../images/punk.jpg" alt="" />
+          <img className="w-28" src={milestone_image} alt="" />
         ) : (
           <Unrevealed />
         )}
