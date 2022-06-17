@@ -22,31 +22,31 @@ export const Crew = (frontmatter: LandingFrontmatter) => {
           <StaticImage src="../images/crew.png" alt="" />
 
           <StaticImage
-            className="!absolute w-[10.1%] h-[11.7%] left-[17.6%] top-[69.5%]"
+            className="!absolute w-[10.1%] h-[11.7%] left-[17.6%] top-[64.5%]"
             src="../images/avatars/santiago.jpg"
             alt=""
           />
 
           <StaticImage
-            className="!absolute w-[10.1%] h-[11.7%] left-[32.9%] top-[62.5%]"
+            className="!absolute w-[10.1%] h-[11.7%] left-[32.9%] top-[57.5%]"
             src="../images/avatars/ivo.jpg"
             alt=""
           />
 
           <StaticImage
-            className="!absolute w-[10.1%] h-[11.7%] left-[48.2%] top-[69.5%]"
+            className="!absolute w-[10.1%] h-[11.7%] left-[48.2%] top-[64.5%]"
             src="../images/avatars/gonzalo.jpg"
             alt=""
           />
 
           <StaticImage
-            className="!absolute w-[10.1%] h-[11.7%] left-[63%] top-[61.8%]"
+            className="!absolute w-[10.1%] h-[11.7%] left-[63%] top-[56.8%]"
             src="../images/avatars/claudio.jpg"
             alt=""
           />
 
           <StaticImage
-            className="!absolute w-[10.1%] h-[11.7%] left-[78.9%] top-[71.1%]"
+            className="!absolute w-[10.1%] h-[11.7%] left-[78.9%] top-[66.1%]"
             src="../images/avatars/joaquin.jpg"
             alt=""
           />
