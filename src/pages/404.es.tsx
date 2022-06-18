@@ -6,7 +6,7 @@ import { NotFoundLayout } from "../layouts/404";
 interface Props {}
 
 export default function Template({}: Props) {
-  usePreferredLanguage();
+  // usePreferredLanguage();
 
   return <NotFoundLayout />;
 }
