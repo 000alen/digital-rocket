@@ -77,14 +77,20 @@ export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
             <NavLink
               className="lg:text-green-400 !not-italic"
               href="/"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                localStorage.setItem("preferredLangKey", "en");
+                setIsOpen(false);
+              }}
             >
               EN
             </NavLink>
             <NavLink
               className="lg:text-green-400 !not-italic"
               href="/es/"
-              onClick={() => setIsOpen(false)}
+              onClick={() => {
+                localStorage.setItem("preferredLangKey", "es");
+                setIsOpen(false);
+              }}
             >
               ES
             </NavLink>

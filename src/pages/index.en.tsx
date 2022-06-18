@@ -1,6 +1,7 @@
 import { graphql } from "gatsby";
 import React from "react";
 
+import { usePreferredLanguage } from "../components/usePreferredLanguage";
 import { IndexLayout } from "../layouts";
 import { LandingFrontmatter } from "../typings";
 
@@ -15,6 +16,8 @@ interface Props {
 export default ({ data }: Props) => {
   const { markdownRemark } = data;
   const { frontmatter } = markdownRemark;
+
+  usePreferredLanguage();
 
   return <IndexLayout {...frontmatter} />;
 };
