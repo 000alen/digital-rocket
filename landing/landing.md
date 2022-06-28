@@ -100,7 +100,7 @@ services:
 roadmap_title: ROADMAP
 roadmap:
   - milestone_title: WITHOUT MASK SOCIETY
-    milestone_description: Q2 2022
+    milestone_description: Q3 2022
     milestone_url: https://www.withoutmasksociety.io/
     milestone_revealed: true
     milestone_image: /assets/punk.jpg
