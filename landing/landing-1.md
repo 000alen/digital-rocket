@@ -144,5 +144,7 @@ email: hello@digitalrocketstudios.io
 phone: +56(2) 2374 8550
 instagram_handle: "@digital_rocket_studio"
 instagram_url: https://www.instagram.com/digital_rocket_studio/
+twitter_handle: "@_Digital_Rocket "
+twitter_url: https://twitter.com/_Digital_Rocket
 contact_text: .
 ---
