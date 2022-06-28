@@ -87,6 +87,8 @@ collections:
       - { name: phone }
       - { name: instagram_handle }
       - { name: instagram_url }
+      - { name: twitter_handle }
+      - { name: twitter_url }
 
   - name: blog
     label: Blog

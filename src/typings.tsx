@@ -1,3 +1,4 @@
+
 export interface LandingFrontmatter {
   about_title: string;
   about_text: string;
@@ -40,6 +41,11 @@ export interface LandingFrontmatter {
   welcome_text: string;
   welcome_caption: string;
   talents_title: string;
+
+  instagram_handle: string;
+  instagram_url: string;
+  twitter_handle: string;
+  twitter_url: string;
 }
 
 export interface BlogEntryFrontmatter {

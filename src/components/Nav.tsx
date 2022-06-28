@@ -15,6 +15,11 @@ interface NavLinkProps {
   children: string;
 }
 
+interface NavIconProps {
+  href: string;
+  IconComponent: React.FC<{ className?: string }>;
+}
+
 const NavLink: React.FC<NavLinkProps> = ({
   className,
   href,
@@ -24,12 +29,24 @@ const NavLink: React.FC<NavLinkProps> = ({
 }) => {
   return (
     <a
-      className={`${className} text-xl italic font-bold lg:transition-all lg:hover:text-green-400`}
+      className={`${className} text-xl italic uppercase font-bold lg:transition-all lg:hover:text-green-400`}
       href={href}
       onClick={() => onClick && onClick()}
       {...(target ? { target } : {})}
     >
       {children}
+    </a>
+  );
+};
+
+const NavIcon: React.FC<NavIconProps> = ({ href, IconComponent }) => {
+  return (
+    <a
+      className="transition-all hover:text-green-400"
+      href={href}
+      target="_blank"
+    >
+      <IconComponent className="w-6 h-6 transition-all hover:fill-green-400" />
     </a>
   );
 };
@@ -72,6 +89,7 @@ export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
           <NavLink href="#contact" onClick={() => setIsOpen(false)}>
             {frontmatter.contact_nav_title}
           </NavLink>
+
           {/* TODO: Use static query instead of hardcoding it */}
           <div className="flex flex-row items-center justify-center gap-2">
             <NavLink
@@ -94,6 +112,17 @@ export const Nav: React.FC<LandingFrontmatter> = (frontmatter) => {
             >
               ES
             </NavLink>
+          </div>
+
+          <div className="flex flex-row items-center justify-center gap-2">
+            <NavIcon
+              href={frontmatter.twitter_url}
+              IconComponent={TwitterIcon}
+            />
+            <NavIcon
+              href={frontmatter.instagram_url}
+              IconComponent={InstagramIcon}
+            />
           </div>
         </div>
       </nav>

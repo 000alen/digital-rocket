@@ -48,6 +48,8 @@ export const pageQuery = graphql`
         crew_text
         instagram_handle
         instagram_url
+        twitter_handle
+        twitter_url
         email
         footer_title
         footer_text
