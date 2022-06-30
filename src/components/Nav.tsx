@@ -1,3 +1,4 @@
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { StaticImage } from "gatsby-plugin-image";
 import React, { useState } from "react";
 
@@ -28,26 +29,26 @@ const NavLink: React.FC<NavLinkProps> = ({
   children,
 }) => {
   return (
-    <a
+    <OutboundLink
       className={`${className} text-xl italic uppercase font-bold lg:transition-all lg:hover:text-green-400`}
       href={href}
       onClick={() => onClick && onClick()}
       {...(target ? { target } : {})}
     >
       {children}
-    </a>
+    </OutboundLink>
   );
 };
 
 const NavIcon: React.FC<NavIconProps> = ({ href, IconComponent }) => {
   return (
-    <a
+    <OutboundLink
       className="transition-all hover:text-green-400"
       href={href}
       target="_blank"
     >
       <IconComponent className="w-6 h-6 transition-all hover:fill-green-400" />
-    </a>
+    </OutboundLink>
   );
 };
 

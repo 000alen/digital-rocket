@@ -1,3 +1,4 @@
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import React from "react";
 
 import { LandingFrontmatter } from "../typings";
@@ -25,13 +26,13 @@ export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
 
           <div className="font-mono prose text-white marker:text-green-400 prose-invert lg:prose-xl">
             Email:{" "}
-            <a
+            <OutboundLink
               href={`mailto:${frontmatter.email}`}
               target="_blank"
               className=""
             >
               {frontmatter.email}
-            </a>
+            </OutboundLink>
           </div>
         </div>
 
@@ -39,22 +40,22 @@ export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
           <h3>
             <strong>{frontmatter.footer_social}</strong>
           </h3>
-          <a
+          <OutboundLink
             href={frontmatter.instagram_url}
             target="_blank"
             className="flex items-center gap-2"
           >
             <InstagramIcon className="w-6 h-6 fill-[#e41388]" />
             <span>{frontmatter.instagram_handle}</span>
-          </a>
-          <a
+          </OutboundLink>
+          <OutboundLink
             href={frontmatter.twitter_url}
             target="_blank"
             className="flex items-center gap-2"
           >
             <TwitterIcon className="w-6 h-6 fill-[#e41388]" />
             <span>{frontmatter.twitter_handle}</span>
-          </a>
+          </OutboundLink>
         </div>
       </div>
 

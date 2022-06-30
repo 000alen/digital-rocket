@@ -1,3 +1,4 @@
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 import { StaticImage } from "gatsby-plugin-image";
 import React from "react";
 
@@ -28,9 +29,9 @@ export const Milestone: React.FC<Props> = ({
         <Markdown>{milestone_description}</Markdown>
         {milestone_revealed && (
           <div className="font-mono prose text-white marker:text-green-400 prose-invert lg:prose-xl">
-            <a href={milestone_url} target="_blank" className="">
+            <OutboundLink href={milestone_url} target="_blank" className="">
               Go!
-            </a>
+            </OutboundLink>
           </div>
         )}
       </div>
