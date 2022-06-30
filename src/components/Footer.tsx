@@ -2,6 +2,7 @@ import React from "react";
 
 import { LandingFrontmatter } from "../typings";
 import { InstagramIcon } from "./icons/InstagramIcon";
+import { TwitterIcon } from "./icons/TwitterIcon";
 import { Markdown } from "./Markdown";
 
 export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
@@ -39,12 +40,20 @@ export const Footer: React.FC<LandingFrontmatter> = (frontmatter) => {
             <strong>{frontmatter.footer_social}</strong>
           </h3>
           <a
-            href="https://www.instagram.com/digital_rocket_studio/"
+            href={frontmatter.instagram_url}
             target="_blank"
             className="flex items-center gap-2"
           >
             <InstagramIcon className="w-6 h-6 fill-[#e41388]" />
-            <span>@digital_rocket_studio</span>
+            <span>{frontmatter.instagram_handle}</span>
+          </a>
+          <a
+            href={frontmatter.twitter_url}
+            target="_blank"
+            className="flex items-center gap-2"
+          >
+            <TwitterIcon className="w-6 h-6 fill-[#e41388]" />
+            <span>{frontmatter.twitter_handle}</span>
           </a>
         </div>
       </div>
